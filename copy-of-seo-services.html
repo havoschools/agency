@@ -1,0 +1,3321 @@
+<!doctype html >
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      class="">
+<head>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+    window._currentDevice = 'desktop';
+    window.Parameters = window.Parameters || {
+        HomeUrl: 'https://www.heliummarketing.agency/',
+        AccountUUID: '04158e24bb6e41aa801103eceee2a5d5',
+        SystemID: 'US_DIRECT_PRODUCTION',
+        SiteAlias: 'fad78d66',
+        SiteType: atob('RFVEQU9ORQ=='),
+        PublicationDate: 'Fri May 31 08:05:30 UTC 2024',
+        ExternalUid: null,
+        IsSiteMultilingual: false,
+        InitialPostAlias: '',
+        InitialDynamicItem: '',
+        DynamicPageInfo: {
+            isDynamicPage: false,
+            base64JsonRowData: 'null',
+        },
+        InitialPageAlias: 'perth-seo-services',
+        InitialPageUuid: 'e7959593ec044d228bdc3755bbca965a',
+        InitialPageId: '1148743424',
+        InitialEncodedPageAlias: 'cGVydGgtc2VvLXNlcnZpY2Vz',
+        CurrentPageUrl: '',
+        IsCurrentHomePage: false,
+        AllowAjax: false,
+        AfterAjaxCommand: null,
+        HomeLinkText: 'Back To Home',
+        UseGalleryModule: false,
+        CurrentThemeName: 'Layout Theme',
+        ThemeVersion: '44600',
+        DefaultPageAlias: '',
+        RemoveDID: true,
+        WidgetStyleID: null,
+        IsHeaderFixed: false,
+        IsHeaderSkinny: false,
+        IsBfs: true,
+        StorePageAlias: 'null',
+        StorePagesUrls: 'e30=',
+        IsNewStore: 'false',
+        StorePath: '',
+        StoreId: 'null',
+        StoreVersion: 0,
+        StoreBaseUrl: '',
+        StoreCleanUrl: true,
+        StoreDisableScrolling: true,
+        IsStoreSuspended: false,
+        NotificationSubDomain: 'heliummarketing',
+        HasCustomDomain: true,
+        SimpleSite: false,
+        showCookieNotification: false,
+        cookiesNotificationMarkup: 'null',
+        translatedPageUrl: '',
+        isFastMigrationSite: false,
+        sidebarPosition: 'LEFT',
+        currentLanguage: 'en',
+        currentLocale: 'en',
+        NavItems: '{}',
+        errors: {
+            general: 'There was an error connecting to the page.<br/> Make sure you are not offline.',
+            password: 'Incorrect name/password combination',
+            tryAgain: 'Try again'
+        },
+        NavigationAreaParams: {
+            ShowBackToHomeOnInnerPages: true,
+            NavbarSize: 4,
+            NavbarLiveHomePage: 'https://www.heliummarketing.agency/',
+            BlockContainerSelector: '.dmBody',
+            NavbarSelector: '#dmNav:has(a)',
+            SubNavbarSelector: '#subnav_main'
+        },
+        hasCustomCode: true,
+        planID: '7',
+        customTemplateId: 'null',
+        siteTemplateId: 'null',
+        productId: 'DM_DIRECT',
+        disableTracking: false,
+        pageType: 'FROM_SCRATCH',
+        isRuntimeServer: true,
+        isInEditor: false,
+    };
+
+    window.Parameters.LayoutID = {};
+    window.Parameters.LayoutID[window._currentDevice] = 6;
+    window.Parameters.LayoutVariationID = {};
+    window.Parameters.LayoutVariationID[window._currentDevice] = 5;
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Injecting site-wide to the head -->
+
+
+
+
+<!-- End Injecting site-wide to the head -->
+
+<!-- Inject secured cdn script -->
+
+
+<!-- ========= Meta Tags ========= -->
+<!-- PWA settings -->
+<script>
+    function toHash(str) {
+        var hash = 5381, i = str.length;
+        while (i) {
+            hash = hash * 33 ^ str.charCodeAt(--i)
+        }
+        return hash >>> 0
+    }
+</script>
+<script>
+    (function (global) {
+    //const cacheKey = global.cacheKey;
+    const isOffline = 'onLine' in navigator && navigator.onLine === false;
+    const hasServiceWorkerSupport = 'serviceWorker' in navigator;
+    if (isOffline) {
+        console.log('offline mode');
+    }
+    if (!hasServiceWorkerSupport) {
+        console.log('service worker is not supported');
+    }
+    if (hasServiceWorkerSupport && !isOffline) {
+        window.addEventListener('load', function () {
+            const serviceWorkerPath = '/runtime-service-worker.js?v=3';
+            navigator.serviceWorker
+                .register(serviceWorkerPath, { scope: './' })
+                .then(
+                    function (registration) {
+                        // Registration was successful
+                        console.log(
+                            'ServiceWorker registration successful with scope: ',
+                            registration.scope
+                        );
+                    },
+                    function (err) {
+                        // registration failed :(
+                        console.log('ServiceWorker registration failed: ', err);
+                    }
+                )
+                .catch(function (err) {
+                    console.log(err);
+                });
+        });
+
+        // helper function to refresh the page
+        var refreshPage = (function () {
+            var refreshing;
+            return function () {
+                if (refreshing) return;
+                // prevent multiple refreshes
+                var refreshkey = 'refreshed' + location.href;
+                var prevRefresh = localStorage.getItem(refreshkey);
+                if (prevRefresh) {
+                    localStorage.removeItem(refreshkey);
+                    if (Date.now() - prevRefresh < 30000) {
+                        return; // dont go into a refresh loop
+                    }
+                }
+                refreshing = true;
+                localStorage.setItem(refreshkey, Date.now());
+                console.log('refereshing page');
+                window.location.reload();
+            };
+        })();
+
+        function messageServiceWorker(data) {
+            return new Promise(function (resolve, reject) {
+                if (navigator.serviceWorker.controller) {
+                    var worker = navigator.serviceWorker.controller;
+                    var messageChannel = new MessageChannel();
+                    messageChannel.port1.onmessage = replyHandler;
+                    worker.postMessage(data, [messageChannel.port2]);
+                    function replyHandler(event) {
+                        resolve(event.data);
+                    }
+                } else {
+                    resolve();
+                }
+            });
+        }
+    }
+})(window);
+</script>
+<!-- Add manifest -->
+<!-- End PWA settings -->
+
+
+<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+<meta charset="utf-8">
+
+<link rel="canonical" href="https://www.heliummarketing.agency/perth-seo-services">
+
+<meta id="view" name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+<!--Add favorites icons-->
+
+<link rel="icon" type="image/x-icon" href="https://irp.cdn-website.com/fad78d66/site_favicon_16_1626157915577.ico"/>
+
+<!-- End favorite icons -->
+<link rel="preconnect" href="https://lirp.cdn-website.com/"/>
+
+
+
+<!-- render the required CSS and JS in the head section -->
+<script>
+    window.SystemID = 'US_DIRECT_PRODUCTION';
+
+    if (!window.dmAPI) {
+        window.dmAPI = {
+            registerExternalRuntimeComponent: function () {
+            },
+            getCurrentDeviceType: function () {
+                return window._currentDevice;
+            }
+        };
+    }
+
+    if (!window.requestIdleCallback) {
+        window.requestIdleCallback = function (fn) {
+            setTimeout(fn, 0);
+        }
+    }
+</script>
+
+<!-- loadCSS function header.jsp-->
+
+
+
+
+
+
+<script id="d-js-load-css">
+/**
+ * There are a few <link> tags with CSS resource in them that are preloaded in the page
+ * in each of those there is a "onload" handler which invokes the loadCSS callback
+ * defined here.
+ * We are monitoring 3 main CSS files - the runtime, the global and the page.
+ * When each load we check to see if we can append them all in a batch. If threre
+ * is no page css (which may happen on inner pages) then we do not wait for it
+ */
+(function () {
+  let cssLinks = {};
+  function loadCssLink(link) {
+    link.onload = null;
+    link.rel = "stylesheet";
+    link.type = "text/css";
+  }
+  
+    function checkCss() {
+      const pageCssLink = document.querySelector("[id*='CssLink']");
+      const widgetCssLink = document.querySelector("[id*='widgetCSS']");
+
+        if (cssLinks && cssLinks.runtime && cssLinks.global && (!pageCssLink || cssLinks.page) && (!widgetCssLink || cssLinks.widget)) {
+            const storedRuntimeCssLink = cssLinks.runtime;
+            const storedPageCssLink = cssLinks.page;
+            const storedGlobalCssLink = cssLinks.global;
+            const storedWidgetCssLink = cssLinks.widget;
+
+            storedGlobalCssLink.disabled = true;
+            loadCssLink(storedGlobalCssLink);
+
+            if (storedPageCssLink) {
+                storedPageCssLink.disabled = true;
+                loadCssLink(storedPageCssLink);
+            }
+
+            if(storedWidgetCssLink) {
+                storedWidgetCssLink.disabled = true;
+                loadCssLink(storedWidgetCssLink);
+            }
+
+            storedRuntimeCssLink.disabled = true;
+            loadCssLink(storedRuntimeCssLink);
+
+            requestAnimationFrame(() => {
+                setTimeout(() => {
+                    storedRuntimeCssLink.disabled = false;
+                    storedGlobalCssLink.disabled = false;
+                    if (storedPageCssLink) {
+                      storedPageCssLink.disabled = false;
+                    }
+                    if (storedWidgetCssLink) {
+                      storedWidgetCssLink.disabled = false;
+                    }
+                    // (SUP-4179) Clear the accumulated cssLinks only when we're
+                    // sure that the document has finished loading and the document 
+                    // has been parsed.
+                    if(document.readyState === 'interactive') {
+                      cssLinks = null;
+                    }
+                }, 0);
+            });
+        }
+    }
+  
+
+  function loadCSS(link) {
+    try {
+      var urlParams = new URLSearchParams(window.location.search);
+      var noCSS = !!urlParams.get("nocss");
+      var cssTimeout = urlParams.get("cssTimeout") || 0;
+
+      if (noCSS) {
+        return;
+      }
+      if (link.href && link.href.includes("d-css-runtime")) {
+        cssLinks.runtime = link;
+        checkCss();
+      } else if (link.id === "siteGlobalCss") {
+        cssLinks.global = link;
+        checkCss();
+      } 
+      
+      else if (link.id && link.id.includes("CssLink")) {
+        cssLinks.page = link;
+        checkCss();
+      } else if (link.id && link.id.includes("widgetCSS")) {
+        cssLinks.widget = link;
+        checkCss();
+      }
+      
+      else {
+        requestIdleCallback(function () {
+          window.setTimeout(function () {
+            loadCssLink(link);
+          }, parseInt(cssTimeout, 10));
+        });
+      }
+    } catch (e) {
+      throw e
+    }
+  }
+  window.loadCSS = window.loadCSS || loadCSS;
+})();
+</script>
+
+
+
+<script data-role="deferred-init" type="text/javascript">
+    /* usage: window.getDeferred(<deferred name>).resolve() or window.getDeferred(<deferred name>).promise.then(...)*/
+    function Def() {
+        this.promise = new Promise((function (a, b) {
+            this.resolve = a, this.reject = b
+        }).bind(this))
+    }
+
+    const defs = {};
+    window.getDeferred = function (a) {
+        return null == defs[a] && (defs[a] = new Def), defs[a]
+    }
+    window.waitForDeferred = function (b, a, c) {
+        let d = window?.getDeferred?.(b);
+        d
+            ? d.promise.then(a)
+            : c && ["complete", "interactive"].includes(document.readyState)
+                ? setTimeout(a, 1)
+                : c
+                    ? document.addEventListener("DOMContentLoaded", a)
+                    : console.error(`Deferred  does not exist`);
+    };
+</script>
+<style id="forceCssIncludes">
+    /* This file is auto-generated from a `scss` file with the same name */
+
+.videobgwrapper{overflow:hidden;position:absolute;z-index:0;width:100%;height:100%;top:0;left:0;pointer-events:none;border-radius:inherit}.videobgframe{position:absolute;width:101%;height:100%;top:50%;left:50%;transform:translateY(-50%) translateX(-50%);object-fit:fill}#dm video.videobgframe{margin:0}@media (max-width:767px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:80vh}}@media (min-width:1025px){.dmRoot .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}@media (min-width:768px) and (max-width:1024px){.responsiveTablet .dmPhotoGallery.newPhotoGallery:not(.photo-gallery-done){min-height:45vh}}#dm [data-show-on-page-only]{display:none!important}#dmRoot div.stickyHeaderFix div.site_content{margin-top:0!important}#dmRoot div.stickyHeaderFix div.hamburger-header-container{position:relative}
+    
+</style>
+<style id="cssVariables" type="text/css">
+    
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Google Fonts Include -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- loadCSS function fonts.jsp-->
+
+
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fonts/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&amp;subset=latin-ext&amp;display=swap"  />
+
+
+
+
+
+<!-- RT CSS Include d-css-runtime-desktop-one-package-structured-global-->
+<link rel="stylesheet" type="text/css" href="https://static.cdn-website.com/mnlt/production/4460/_dm/s/rt/dist/css/d-css-runtime-desktop-one-package-structured-global.min.css" />
+
+<!-- End of RT CSS Include -->
+
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/WIDGET_CSS/6aced3f97aa2b7910da07f057523bbe5.css" id="widgetCSS" />
+
+<!-- Support `img` size attributes -->
+<style>img[width][height] {
+  height: auto;
+}</style>
+
+<!-- Support showing sticky element on page only -->
+<style>
+  body[data-page-alias="perth-seo-services"] #dm [data-show-on-page-only="perth-seo-services"] {
+    display: block !important;
+  }
+</style>
+
+<!-- This is populated in Ajax navigation -->
+<style id="pageAdditionalWidgetsCss" type="text/css">
+</style>
+
+
+
+
+<!-- Site CSS -->
+<link type="text/css" rel="stylesheet" href="https://irp.cdn-website.com/fad78d66/files/fad78d66_1.min.css?v=1859" id="siteGlobalCss" />
+
+
+
+<style id="customWidgetStyle" type="text/css">
+
+</style>
+<style id="innerPagesStyle" type="text/css">
+    
+</style>
+
+
+<style
+        id="additionalGlobalCss" type="text/css"
+>
+</style>
+
+<style id="pagestyle" type="text/css">
+    *#dm *.dmBody *.u_1877808609:before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_1877808609.before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_1877808609>*.bgExtraLayerOverlay
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody div.u_1877808609:before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_1877808609.before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_1877808609>*.bgExtraLayerOverlay
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_1014151127
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody div.u_1877808609
+{
+	background-repeat:no-repeat !important;
+	background-image:url(https://lirp.cdn-website.com/fad78d66/dms3rep/multi/opt/Helium-42-2880w.jpg) !important;
+}
+*#dm *.dmBody *.u_signup:before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_signup.before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_signup>*.bgExtraLayerOverlay
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody div.u_signup:before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_signup.before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_signup>*.bgExtraLayerOverlay
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_signup
+{
+	background-repeat:no-repeat !important;
+	background-image:url(https://lirp.cdn-website.com/fad78d66/dms3rep/multi/opt/Helium-42-2880w.jpg) !important;
+}
+*#dm *.dmBody *.u_sign-up:before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_sign-up.before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_sign-up>*.bgExtraLayerOverlay
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody div.u_sign-up:before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_sign-up.before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_sign-up>*.bgExtraLayerOverlay
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody *.u_pa_9581131:before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_pa_9581131.before
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody *.u_pa_9581131>*.bgExtraLayerOverlay
+{
+	opacity:0.5 !important;
+	background-color:rgb(255,255,255) !important;
+}
+*#dm *.dmBody div.u_pa_9581131:before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_pa_9581131.before
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_pa_9581131>*.bgExtraLayerOverlay
+{
+	background-color:rgba(0,0,0,1) !important;
+	opacity:0.35 !important;
+}
+*#dm *.dmBody div.u_pa_9581131
+{
+	background-repeat:no-repeat !important;
+	background-image:url(https://lirp.cdn-website.com/fad78d66/dms3rep/multi/opt/Helium-42-2880w.jpg) !important;
+}
+*#dm *.dmBody a.u_1749386112 .iconBg
+{
+	display:none !important;
+}
+*#dm *.dmBody div.u_sign-up
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-color:rgba(0,216,133,1) !important;
+}
+*#dm *.dmBody a.u_1749386112 span.text
+{
+	font-weight:bold !important;
+	color:rgba(0,0,0,1) !important;
+}
+*#dm *.dmBody a.u_1749386112:hover span.text
+{
+	color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody a.u_1749386112.hover span.text
+{
+	color:rgba(255,255,255,1) !important;
+}
+*#dm *.dmBody a.u_1749386112
+{
+	background-color:rgba(0,0,0,0) !important;
+	border-color:rgba(0,0,0,1) !important;
+	border-width:4px !important;
+	border-style:solid !important;
+	border-radius:50px !important;
+	-moz-border-radius:50px !important;
+	-webkit-border-radius:50px !important;
+}
+*#dm *.dmBody a.u_1749386112:hover
+{
+	background-color:rgba(0,0,0,1) !important;
+	background-image:none !important;
+	border-color:rgba(0,0,0,1) !important;
+}
+*#dm *.dmBody a.u_1749386112.hover
+{
+	background-color:rgba(0,0,0,1) !important;
+	background-image:none !important;
+	border-color:rgba(0,0,0,1) !important;
+}
+*#dm div.dmContent h2 *
+{
+	line-height:1 !important;
+}
+*#dm div.dmContent h4 *
+{
+	line-height:1 !important;
+}
+*#dm *.dmBody div.u_1167832186
+{
+	border-bottom-left-radius:20px !important;
+	background-color:rgba(0,0,0,0) !important;
+	border-top-left-radius:0 !important;
+}
+*#dm div.dmContent h3
+{
+	line-height:1.1 !important;
+}
+*#dm div.dmContent h3 *
+{
+	line-height:1.1 !important;
+}
+*#dm *.dmBody div.u_1467743915
+{
+	background-color:rgba(255,208,91,1) !important;
+}
+*#dm *.dmBody *.u_1345093287 .tab .desc-title
+{
+	text-align:CENTER !important;
+}
+*#dm *.dmBody *.u_1345093287 .tab-label.not-active>h4
+{
+	text-align:LEFT !important;
+}
+*#dm *.dmBody *.u_1345093287 .tab-label.active>h4
+{
+	text-align:LEFT !important;
+}
+*#dm *.dmBody *.u_1345093287 .tab-label.hover>h4
+{
+	text-align:LEFT !important;
+}
+*#dm *.dmBody *.u_1345093287 .tab-label.active>h4>span
+{
+	text-align:LEFT !important;
+}
+*#dm *.dmBody *.u_1345093287 .tab-label.hover>h4>span
+{
+	text-align:LEFT !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.not-active>h4
+{
+	font-family:Poppins !important;
+	font-style:normal !important;
+	color:rgba(0,0,0,1) !important;
+	font-weight:bold !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.active>h4
+{
+	font-family:Poppins !important;
+	font-style:normal !important;
+	color:rgba(0,0,0,1) !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.hover>h4
+{
+	font-family:Poppins !important;
+	font-style:normal !important;
+	color:rgba(0,0,0,1) !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.active>h4>span
+{
+	font-family:Poppins !important;
+	font-style:normal !important;
+	color:rgba(0,0,0,1) !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.hover>h4>span
+{
+	font-family:Poppins !important;
+	font-style:normal !important;
+	color:rgba(0,0,0,1) !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.not-active>*
+{
+	font-weight:normal !important;
+	font-family:Poppins !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.active>*
+{
+	font-weight:bold !important;
+	color:rgba(0,0,0,1) !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.hover>*
+{
+	font-weight:bold !important;
+	color:rgba(0,0,0,1) !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.active>*>span
+{
+	font-weight:bold !important;
+	color:rgba(0,0,0,1) !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.hover>*>span
+{
+	font-weight:bold !important;
+	color:rgba(0,0,0,1) !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.active
+{
+	border-bottom-color:rgba(255,208,91,1) !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.hover
+{
+	border-bottom-color:rgba(255,208,91,1) !important;
+}
+*#dm *.dmBody div.u_1490249450 .accordion-title
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody *.u_1490249450 .accordion-title
+{
+	justify-content:flex-start !important;
+	text-align:left !important;
+}
+*#dm *.dmBody *.u_1490249450 .title-text
+{
+	justify-content:flex-start !important;
+	text-align:left !important;
+}
+*#dm *.dmBody *.u_1490249450 .title-text *
+{
+	justify-content:flex-start !important;
+	text-align:left !important;
+}
+*#dm *.dmBody div.u_1987046726
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody *.u_1439614429
+{
+	width:100% !important;
+}
+*#dm *.dmBody div.u_1762605806
+{
+	border-radius:0 !important;
+	-moz-border-radius:0 !important;
+	-webkit-border-radius:0 !important;
+	background-color:rgba(0,0,0,0) !important;
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1327759015
+{
+	border-radius:20px !important;
+	-moz-border-radius:20px !important;
+	-webkit-border-radius:20px !important;
+	background-repeat:no-repeat !important;
+	background-image:url(https://lirp.cdn-website.com/fad78d66/dms3rep/multi/opt/Helium+Web+Size-252-2880w.JPG) !important;
+	background-size:cover !important;
+}
+*.dmFooterContainer
+{
+	display:null !important;
+}
+*#dm *.dmBody div.u_1318383530 .accordion-title
+{
+	background-color:rgba(0,0,0,0) !important;
+}
+*#dm *.dmBody *.u_1318383530 .accordion-title
+{
+	justify-content:flex-start !important;
+	text-align:left !important;
+}
+*#dm *.dmBody *.u_1318383530 .title-text
+{
+	justify-content:flex-start !important;
+	text-align:left !important;
+}
+*#dm *.dmBody *.u_1318383530 .title-text *
+{
+	justify-content:flex-start !important;
+	text-align:left !important;
+}
+*#dm *.dmBody *.u_1076271485
+{
+	width:100% !important;
+}
+*#dm *.dmBody div.u_1076271485 img[dm_changed]
+{
+	border-radius:20px 20px 20px 20px !important;
+}
+*#dm *.dmBody div.u_1076271485 img
+{
+	border-radius:20px 20px 20px 20px !important;
+}
+*#dm *.dmBody div.u_1897614735
+{
+	background-repeat:no-repeat !important;
+	background-image:none !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody *.u_1714137087
+{
+	width:100% !important;
+}
+*#dm *.dmBody div.u_1714137087 img[dm_changed]
+{
+	border-radius:20px 20px 20px 20px !important;
+}
+*#dm *.dmBody div.u_1714137087 img
+{
+	border-radius:20px 20px 20px 20px !important;
+}
+
+</style>
+
+<style id="pagestyleDevice" type="text/css">
+    *#dm *.dmBody div.u_1877808609
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:150px !important;
+	padding-left:0 !important;
+	padding-bottom:150px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:none !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+	background-attachment:fixed !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1717727491
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1467743915
+{
+	padding-top:200px !important;
+	padding-left:30px !important;
+	padding-bottom:130px !important;
+	padding-right:30px !important;
+	width:auto !important;
+	margin-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_signup
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:150px !important;
+	padding-left:0 !important;
+	padding-bottom:150px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:none !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+	background-attachment:fixed !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_pa_9581131
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:150px !important;
+	padding-left:0 !important;
+	padding-bottom:150px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:none !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	text-align:center !important;
+	background-attachment:fixed !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody a.u_1749386112 span.text
+{
+	font-size:18px !important;
+}
+div.u_1039255947
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:1079px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	max-width:calc(100% - 201px) !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	display:block !important;
+}
+div.u_1749290517
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:1079px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	max-width:calc(100% - 201px) !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1925808015
+{
+	margin-left:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-top:16px !important;
+	margin-bottom:8px !important;
+	margin-right:auto !important;
+	padding-right:0 !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	max-width:100% !important;
+	min-width:25px !important;
+}
+div.u_1591219996
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:1079px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	max-width:calc(100% - 201px) !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1591219996
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	display:block !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	margin-top:0 !important;
+	margin-bottom:8px !important;
+}
+div.u_1958081519
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:1079px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	max-width:calc(100% - 201px) !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1039255947
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	display:block !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+}
+*#dm *.dmBody div.u_1726735318
+{
+	padding-top:50px !important;
+	padding-left:60px !important;
+	padding-bottom:0 !important;
+	padding-right:60px !important;
+	width:auto !important;
+	margin-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.active>h4
+{
+	font-size:25px !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.hover>h4
+{
+	font-size:25px !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.active>h4>span
+{
+	font-size:25px !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.hover>h4>span
+{
+	font-size:25px !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab-label.not-active>h4
+{
+	font-size:25px !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab .desc-title
+{
+	font-size:22px !important;
+}
+*#dm *.dmBody div.u_1345093287 .tab .tab-description>p
+{
+	font-size:22px !important;
+}
+*#dm *.dmBody div.u_1345093287
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:center !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	margin-top:65px !important;
+	margin-bottom:0 !important;
+}
+*#dm *.dmBody div.u_1516643170
+{
+	padding-top:125px !important;
+	padding-left:60px !important;
+	padding-bottom:0 !important;
+	padding-right:60px !important;
+	width:auto !important;
+	margin-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1565477197
+{
+	padding-top:125px !important;
+	padding-left:60px !important;
+	padding-bottom:0 !important;
+	padding-right:60px !important;
+	width:auto !important;
+	margin-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+}
+*#dm *.dmBody div.u_1490249450 .accordion-description .section-inner
+{
+	font-size:18px !important;
+}
+*#dm *.dmBody div.u_1762605806
+{
+	margin-left:0 !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:20px !important;
+	background-position:100% 50% !important;
+	background-repeat:no-repeat !important;
+	background-size:contain !important;
+}
+*#dm *.dmBody div.u_1078748225
+{
+	margin-left:0 !important;
+	padding-top:0 !important;
+	padding-left:30px !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:30px !important;
+	width:auto !important;
+}
+*#dm *.dmBody div.u_1327759015
+{
+	background-position:50% 50% !important;
+}
+*#dm *.dmBody div.u_1214828494
+{
+	height:600px !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 99px) !important;
+	position:relative !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	max-width:1009px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:start !important;
+}
+*#dm *.dmBody div.u_1439614429
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:59.0452px !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	text-align:start !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1167832186
+{
+	margin-left:0 !important;
+	padding-top:40px !important;
+	padding-left:40px !important;
+	padding-bottom:40px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:0 !important;
+}
+*#dm *.dmBody div.u_1490249450
+{
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:0 !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	max-width:100% !important;
+	min-width:25px !important;
+	text-align:center !important;
+	display:block !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+}
+*#dm *.dmBody div.u_1987046726
+{
+	padding-top:33px !important;
+	padding-left:60px !important;
+	padding-bottom:100px !important;
+	padding-right:60px !important;
+	width:auto !important;
+	background-repeat:no-repeat !important;
+	background-size:contain !important;
+	background-position:0 100% !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	position:relative !important;
+	height:auto !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	min-width:0 !important;
+	text-align:start !important;
+}
+*#dm *.dmBody div.u_1448266433
+{
+	margin-left:0 !important;
+	padding-top:97px !important;
+	padding-left:60px !important;
+	padding-bottom:22px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:60px !important;
+	width:auto !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	position:relative !important;
+	height:auto !important;
+	max-width:100% !important;
+	min-width:0 !important;
+	text-align:start !important;
+}
+*#dm *.dmBody div.u_1561329125
+{
+	margin-left:0 !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:40px !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:0 !important;
+	width:auto !important;
+}
+*#dm *.dmBody div.u_1213456024
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	max-width:513.5px !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	margin-top:23px !important;
+	margin-bottom:0 !important;
+}
+*#dm *.dmBody div.u_1646248677
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:53.0156px !important;
+	margin-left:0 !important;
+	max-width:583.469px !important;
+	margin-top:16px !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1502997297
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:53.0078px !important;
+	margin-left:0 !important;
+	max-width:583.477px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1222519555
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:79.25px !important;
+	margin-left:0 !important;
+	max-width:583.477px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+}
+*#dm *.dmBody div.u_1958081519
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	max-width:100% !important;
+	padding-right:0 !important;
+	min-width:25px !important;
+	display:block !important;
+	margin-right:auto !important;
+	margin-left:auto !important;
+	margin-top:0 !important;
+	margin-bottom:8px !important;
+}
+*#dm *.dmBody div.u_1421004901
+{
+	margin-left:0 !important;
+	padding-top:80px !important;
+	padding-left:60px !important;
+	padding-bottom:80px !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:60px !important;
+	width:auto !important;
+}
+*#dm *.dmBody div.u_1671888771
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:100% !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0 !important;
+	padding-bottom:2px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:100% !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:0 !important;
+	min-width:0 !important;
+	display:block !important;
+}
+*#dm *.dmBody a.u_1749386112
+{
+	margin-left:auto !important;
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:0 !important;
+	display:block !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:200px !important;
+	position:relative !important;
+	height:67px !important;
+	max-width:100% !important;
+	min-width:0 !important;
+	text-align:center !important;
+}
+*#dm *.dmBody div.u_sign-up
+{
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:auto !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:120px !important;
+	padding-left:60px !important;
+	padding-bottom:150px !important;
+	margin-right:0 !important;
+	margin-left:0 !important;
+	max-width:none !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	padding-right:60px !important;
+	min-width:0 !important;
+	text-align:center !important;
+	background-attachment:fixed !important;
+	background-size:cover !important;
+}
+*#dm *.dmBody div.u_1318383530 .accordion-description .section-inner
+{
+	font-size:18px !important;
+}
+*#dm *.dmBody div.u_1318383530
+{
+	padding-top:0 !important;
+	padding-left:0 !important;
+	padding-bottom:0 !important;
+	padding-right:0 !important;
+	float:none !important;
+	top:0 !important;
+	left:0 !important;
+	width:calc(100% - 0px) !important;
+	position:relative !important;
+	height:auto !important;
+	max-width:726.444px !important;
+	min-width:25px !important;
+	text-align:center !important;
+	display:block !important;
+}
+*#dm *.dmBody div.u_1516536329
+{
+	margin-left:0px !important;
+	padding-top:0px !important;
+	padding-left:0px !important;
+	padding-bottom:0px !important;
+	margin-top:0px !important;
+	margin-bottom:0px !important;
+	margin-right:0px !important;
+	padding-right:0px !important;
+	width:auto !important;
+}
+*#dm *.dmBody div.u_1897614735
+{
+	margin-left:0 !important;
+	padding-top:0 !important;
+	padding-left:60px !important;
+	padding-bottom:0 !important;
+	margin-top:0 !important;
+	margin-bottom:0 !important;
+	margin-right:0 !important;
+	padding-right:0 !important;
+	background-repeat:no-repeat !important;
+	background-size:contain !important;
+	background-position:50% 50% !important;
+}
+*#dm *.dmBody div.u_1749290517
+{
+	float:none !important;
+	top:0px !important;
+	left:0px !important;
+	width:1158px !important;
+	position:relative !important;
+	height:auto !important;
+	padding-top:2px !important;
+	padding-left:0px !important;
+	padding-bottom:2px !important;
+	max-width:100% !important;
+	padding-right:0px !important;
+	min-width:0 !important;
+	display:block !important;
+	margin-right:auto !important;
+	margin-left:0 !important;
+	margin-top:0px !important;
+	margin-bottom:8px !important;
+}
+
+</style>
+
+<!-- Flex Sections CSS -->
+
+
+
+
+
+<style id="globalFontSizeStyle" type="text/css">
+    .font-size-30, .size-30, .size-30 > font { font-size: 30px !important; }[data-version] .size-110, [data-version] .font-size-110 {font-size: 110px !important;}.font-size-18, .size-18, .size-18 > font { font-size: 18px !important; }.font-size-48, .size-48, .size-48 > font { font-size: 48px !important; }.font-size-14, .size-14, .size-14 > font { font-size: 14px !important; }
+</style>
+<style id="pageFontSizeStyle" type="text/css">
+</style>
+
+
+
+
+<style id="hideAnimFix">
+    .dmDesktopBody:not(.editGrid) [data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) [data-anim-extended] {
+        visibility: hidden;
+    }
+
+    .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-desktop]:not([data-anim-desktop='none']), .dmDesktopBody:not(.editGrid) .dmNewParagraph[data-anim-extended] {
+        visibility: hidden !important;
+    }
+</style>
+
+
+
+
+<style id="fontFallbacks">
+    @font-face {
+  font-family: "Roboto Fallback";
+  src: local('Arial');
+  ascent-override: 92.6709%;
+  descent-override: 24.3871%;
+  size-adjust: 100.1106%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Montserrat Fallback";
+  src: local('Arial');
+  ascent-override: 84.9466%;
+  descent-override: 22.0264%;
+  size-adjust: 113.954%;
+  line-gap-override: 0%;
+ }@font-face {
+  font-family: "Poppins Fallback";
+  src: local('Arial');
+  ascent-override: 92.326%;
+  descent-override: 30.7753%;
+  line-gap-override: 8.793%;
+  size-adjust: 113.7274%;
+}@font-face {
+  font-family: "Lato Fallback";
+  src: local('Arial');
+  ascent-override: 101.3181%;
+  descent-override: 21.865%;
+  size-adjust: 97.4159%;
+  line-gap-override: 0%;
+ }
+</style>
+
+
+<!-- End render the required css and JS in the head section -->
+
+
+
+
+
+
+
+  <link type="application/rss+xml" rel="alternate" href="feed/rss2"/>
+  <link type="application/atom+xml" rel="alternate" href="feed/atom"/>
+  <meta property="og:type" content="website"/>
+  <meta property="og:image" content="https://lirp.cdn-website.com/fad78d66/dms3rep/multi/opt/Untitled-2-09-1920w.jpg"/>
+  <title>
+    
+    SEO Services Perth | Helium Marketing Agency
+  
+  </title>
+  <meta name="keywords" content="SEO Services Perth Businesses"/>
+  <meta name="description" content="Are you in Perth and need help with search engine optimisation for your website? Our SEO services are for Perth businesses like yours."/>
+  <meta property="og:url" content="https://www.heliummarketing.agency/seo-services-perth"/>
+  <script src="https://apps.elfsight.com/p/platform.js" defer="">
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  </script>
+  <div class="elfsight-app-20e592ed-65c7-47fa-a435-a8bff009d85f">
+  </div>
+  <!-- Google Tag Manager -->  <script>
+
+
+
+
+
+
+
+
+
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-N2RRBZ7');
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  </script>
+  <!-- End Google Tag Manager -->  <meta name="google-site-verification" content="8xnGhIMCv6Xb2aZHG8OW2ALBz7F-xr7gdEOJXlU6_7Q"/>
+  <meta property="og:type" content="website"/>
+
+  <meta name="twitter:card" content="summary"/>
+  <meta name="twitter:title" content="SEO Services Perth | Helium Marketing Agency"/>
+  <meta name="twitter:description" content="Are you in Perth and need help with search engine optimisation for your website? Our SEO services are for Perth businesses like yours."/>
+  <meta property="og:description" content="Are you in Perth and need help with search engine optimisation for your website? Our SEO services are for Perth businesses like yours."/>
+  <meta property="og:title" content="SEO Services Perth | Helium Marketing Agency"/>
+
+
+
+
+<!-- SYS- VVNfRElSRUNUX1BST0RVQ1RJT04= -->
+</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body id="dmRoot" data-page-alias="perth-seo-services"  class="dmRoot dmDesktopBody fix-mobile-scrolling addCanvasBorder dmResellerSite dmLargeBody "
+      style="padding:0;margin:0;"
+      
+    >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ========= Site Content ========= -->
+<div id="dm" class='dmwr'>
+    
+    <div class="dm_wrapper standard-var5 widgetStyle-3 standard">
+         <div dmwrapped="true" id="1589503997"> <div dmtemplateid="StandardLayoutMultiD" class="standardHeaderLayout dm-bfs dm-layout-sec hasAnimations inMiniHeaderMode hasStickyHeader rows-1200 hide-back-to-top header-over-content dmPageBody d-page-1074819038 dmFreeHeader" id="dm-outer-wrapper" data-page-class="1074819038" data-soch="true" data-background-parallax-selector=".dmHomeSection1, .dmSectionParallex"> <div id="dmStyle_outerContainer" class="dmOuter"> <div id="dmStyle_innerContainer" class="dmInner"> <div class="dmLayoutWrapper standard-var dmStandardDesktop"> <div> <div id="iscrollBody"> <div id="site_content"> <div class="dmHeaderContainer fHeader d-header-wrapper"> <div id="hcontainer" class="u_hcontainer dmHeader p_hfcontainer" freeheader="true" headerlayout="b58ba5b5703b4cd7b5f5f7951565dc87===horizontal-layout-5" layout="7f3c1de367df47d5b45ab63d33101c7b===header" data-scrollable-target="body" data-scrollable-target-threshold="1" data-scroll-responder-id="1" logo-size-target="22%" secondary-image="https://lirp.cdn-website.com/fad78d66/dms3rep/multi/opt/Helium_Logo_Green_Web-7d91e8af-1920w.png" has-secondary-image="true"> <div dm:templateorder="85" class="dmHeaderResp dmHeaderStack noSwitch" id="1709005236"> <div class="dmRespRow dmDefaultListContentRow u_1196850021 fullBleedChanged fullBleedMode" style="text-align:center" id="1196850021"> <div class="dmRespColsWrapper" id="1579997097"> <div class="u_1439513801 small-12 dmRespCol large-2 medium-2" id="1439513801"> <div class="u_1146585818 imageWidget align-center" data-widget-type="image" id="1146585818" data-element-type="image"> <a href="index.html" id="1524454653" file="false"><img src="https://irp.cdn-website.com/fad78d66/files/uploaded/Helium_Logo_RGB-1920w-1920w.png" id="1468779315" class="" data-dm-image-path="https://irp.cdn-website.com/fad78d66/files/uploaded/Helium_Logo_RGB-1920w-1920w.png" width="779" height="246" alt="Helium Marketing Agency" onerror="handleImageLoadError(this)"/></a> 
+</div> 
+</div> 
+ <div class="u_1480910531 dmRespCol small-12 large-8 medium-8" id="1480910531"> <nav class="u_1197451865 effect-bottom hide-for-large main-navigation unifiednav dmLinksMenu" role="navigation" layout-main="horizontal_nav_layout_2" layout-sub="submenu_horizontal_2" data-show-vertical-sub-items="HOVER" id="1197451865" dmle_extension="onelinksmenu" data-element-type="onelinksmenu" wr="true" icon="true" surround="true" adwords="" navigation-id="unifiedNav"> <ul role="menubar" class="unifiednav__container  " data-auto="navigation-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="helium-marketing.html" class="unifiednav__item  dmUDNavigationItem_010101961500  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         People
+        " data-auto="page-text-style">People<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" aria-haspopup="true" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="copy-of-seo-services.html#" class="unifiednav__item  dmUDNavigationItem_01010173401  unifiednav__item_has-sub-nav" target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Services" data-auto="page-text-style">Services<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+ <ul role="menu" aria-expanded="false" class="unifiednav__container unifiednav__container_sub-nav" data-depth="0" data-auto="sub-pages"> <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="google-ads-management-agency.html" class="unifiednav__item  dmUDNavigationItem_010101639100  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Google Ads" data-auto="page-text-style">Google Ads<span class="icon icon-angle-right" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="copy-of-seo-services.html" class="unifiednav__item  dmNavItemSelected  dmUDNavigationItem_010101411519  " target="" data-target-page-alias="" data-auto="selected-page"> <span class="nav-item-text " data-link-text="SEO" data-auto="page-text-style">SEO<span class="icon icon-angle-right"></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="website-design-perth.html" class="unifiednav__item  dmUDNavigationItem_010101819325  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Website Design" data-auto="page-text-style">Website Design<span class="icon icon-angle-right" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="1"> <a href="creative-marketing-perth.html" class="unifiednav__item  dmUDNavigationItem_010101892620  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="Creative" data-auto="page-text-style">Creative<span class="icon icon-angle-right" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="marketing-portfolio.1.html" class="unifiednav__item  dmUDNavigationItem_010101690878  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Work
+        " data-auto="page-text-style">Work<span class="icon icon-angle-down" data-hidden-on-mobile="" data-hidden-on-desktop="" data-hidden-on-tablet=""></span> 
+</span> 
+</a> 
+</li> 
+ <li role="menuitem" class=" unifiednav__item-wrap " data-auto="more-pages" data-depth="0"> <a href="insights.html" class="unifiednav__item  dmUDNavigationItem_010101394269  " target="" data-target-page-alias=""> <span class="nav-item-text " data-link-text="
+         Insights
+        " data-auto="page-text-style">Insights<span class="icon icon-angle-down"></span> 
+</span> 
+</a> 
+</li> 
+</ul> 
+</nav> 
+ <div class="u_1643830005 widget-7ebf92 hide-for-medium hide-for-small dmCustomWidget" data-lazy-load="false" data-title="" id="1643830005" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="7ebf92fcfe734a44a1911cd164200ec0" data-widget-version="360" data-widget-config="eyJkaXZpZGVyU3R5bGUiOiJzcGFjZSIsInRodW1ibmFpbCI6bnVsbCwidGV4dENvbXBvbmV0IjpudWxsLCJzaG93U3ViTmF2VGl0bGUiOnRydWUsImNvbnRhY3RJbmZvIjpudWxsLCJjdXN0b21CdG4iOm51bGwsImV4dE5hdiI6bnVsbCwidmlkZW8iOm51bGwsInNob3dDb21BcnJvdyI6ZmFsc2UsInNvY2lhbE1lZGlhIjpudWxsLCJpc1N0aWNreSI6dHJ1ZSwiZ3JvdXAyIjpudWxsLCJncm91cDEiOm51bGwsIm5hdmlnYXRpb24iOm51bGwsIm5hdlBvcyI6ImNlbnRlciIsImN0YyI6bnVsbCwic2hvd0hvbWUiOnRydWUsImdyaWQiOm51bGwsIm11bHRpU3ViTmF2IjpudWxsLCJ1c2VEaXZpZGVyIjp0cnVlLCJuYXZIb3ZlciI6ImJvdHRvbUxpbmUiLCJnYWxsZXJ5IjpudWxsfQ=="> <div class="widget-layout-result center" lang="en"> <ul class="meganav-container"></ul> 
+ <div class="hiddenDiv meganav-container__ctc-title meganav-container__ctc-description meganav-container__ctc-btn meganav-container__contact-btn meganav-container__multi-sub-nav-wrapper meganav-container__multi-sub-nav-icon"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1738875208 dmRespCol small-12 large-2 medium-2" id="1738875208"> <a data-display-type="block" class="align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient u_1432180820" file="false" href="contact.html" data-element-type="dButtonLinkId" id="1432180820"> <span class="iconBg" id="1543543600"> <span class="icon hasFontIcon icon-star" id="1494870293"></span> 
+</span> 
+ <span class="text" id="1377070574">Contact</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="stickyHeaderSpacer" id="stickyHeaderSpacer" data-new="true"></div> 
+ <div class="dmRespRow dmRespRowStable dmRespRowNoPadding dmPageTitleRow "> <div class="dmRespColsWrapper"> <div class="large-12 dmRespCol"> <div id="innerBar" class="innerBar lineInnerBar dmDisplay_None"> <div class="titleLine display_None"><hr/></div> 
+<!-- Page title is hidden in css for new responsive sites. It is left here only so we don't break old sites. Don't copy it to new layouts --> <div id="pageTitleText"> <div class="innerPageTitle">SEO</div> 
+</div> 
+ <div class="titleLine display_None"><hr/></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div dmwrapped="true" id="dmFirstContainer" class="dmBody u_dmStyle_template_perth-seo-services"> <div id="allWrapper" class="allWrapper"> <div id="dm_content" class="dmContent"> <div dm:templateorder="1" class="dmDefaultRespTmpl" id="1074819038"> <div class="innerPageTmplBox dmDefaultPage  dmRespRowsWrapper" id="1141834825"> <div class="dmRespRow u_1467743915" id="1467743915"> <div class="dmRespColsWrapper" id="1231062229"> <div class="u_1227182990 dmRespCol small-12 medium-12 large-12" id="1227182990"> <div class="u_1717727491 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1717727491" style="text-align: left; display: block;" data-anim-desktop="none"> <h1 class="m-size-22 size-30" style="line-height: 1.1;"><span class="font-size-30 m-font-size-22" m-font-size-set="true" style="color: rgb(0, 0, 0); display: initial;">SEO services for Perth businesses.</span><span style="display: initial;"><br/></span></h1> 
+</div> 
+ <div class="u_1925808015 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1925808015" data-anim-desktop="none" data-styletopreserve="{" background-image":""}"="" style=""> <h2 class="m-size-62 size-110" style="line-height: 1.1;"><span class="m-font-size-62 font-size-110" m-font-size-set="true" style="display: unset;">So, who&rsquo;s the best SEO agency in Perth?</span></h2> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_1448266433 dmRespRow" id="1448266433"> <div class="dmRespColsWrapper" id="1009314932"> <div class="dmRespCol large-12 medium-12 small-12" id="1537526246"> <div class="u_1039255947 dmNewParagraph" data-element-type="paragraph" id="1039255947" style="opacity: 1; transform: translate3d(0%, 0%, 0px); text-align: left;" data-version="5" data-anim-desktop="fadeInCombo" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6ImZhZGVJbkNvbWJvIiwiZHVyYXRpb24iOjEsImRlbGF5IjowLCJpbnRlbnNpdHkiOjEsInJldmVyc2UiOmZhbHNlLCJkaXIiOiJ1cCJ9LCJtb2JpbGUiOnsidHJpZ2dlciI6ImVudHJhbmNlIiwiYW5pbWF0aW9uIjoiZmFkZUluQ29tYm8iLCJkdXJhdGlvbiI6MSwiZGVsYXkiOjAsImludGVuc2l0eSI6MSwicmV2ZXJzZSI6ZmFsc2UsImRpciI6InVwIn19" data-anim-mobile="fadeInCombo"> <h3 style="line-height: 1.1;" class="m-size-62"><span m-font-size-set="true" style="display: initial;" class="m-font-size-62">Honestly, we don't know if it's us..</span><span m-font-size-set="true" style="display: initial; color: rgb(246, 199, 91);" class="m-font-size-62">.</span><span style="display: initial;"><br/></span></h3> 
+</div></div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1726735318" id="1726735318"> <div class="dmRespColsWrapper" id="1097755254"> <div class="u_1893397078 dmRespCol small-12 large-7 medium-7" id="1893397078"> <div class="u_1502997297 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1502997297" style="transition: none 0s ease 0s; text-align: left; display: block;"> <h4 style="line-height: 1.3;"><span style="display: unset;">Chances are, you&rsquo;ve been googling SEO agencies to find the cream of the crop. Isn't it a crazy coincidence that they're all &quot;the best&quot;?</span></h4> 
+</div> 
+ <div class="u_1646248677 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1646248677" style="transition: none 0s ease 0s; text-align: left; display: block;"><p><span class="" style="display: initial;"><span style="display: initial;">With</span> 
+</span><span style="display: unset;">heaps of great SEO service providers here in Perth, you've probably noticed every man and his dog claims to be the best. Here are four headlines we&rsquo;ve pulled from four different (and credible) SEO agencies in Perth:</span><span style="display: initial;"><br/></span></p></div> 
+ <div class="u_1213456024 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1213456024" style="transition: opacity 1s ease-in-out 0s;"> <ul class="defaultList bullet"><li class="size-18 m-size-14"><span class="font-size-18 m-font-size-14" style="font-weight: bold; display: initial;">Perth&rsquo;s #1 SEO Company.</span></li><li class="size-18 m-size-14"><span class="font-size-18 m-font-size-14" style="font-weight: bold; display: initial;">What makes us Perth&rsquo;s #1 for SEO?</span></li><li class="size-18 m-size-14"><span class="font-size-18 m-font-size-14" style="font-weight: bold; display: initial;">Australia&rsquo;s Top SEO Specialists.</span></li><li class="size-18 m-size-14"><span class="font-size-18 m-font-size-14" style="font-weight: bold; display: initial;">Perth&rsquo;s #1 SEO agency.&nbsp;</span></li></ul> 
+<p><span style="display: initial;"><br/></span></p></div> 
+ <div class="u_1222519555 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1222519555" style="transition: none 0s ease 0s; text-align: left; display: block;"><p><span class="" style="display: unset;"><span style="display: unset;">Four very big &mdash; and impossible to prove &mdash; claims.</span> 
+</span><span style="display: initial;">We honestly don't know whether w</span><span class="" style="display: unset;"><span style="display: unset;">e're the best SEO agency, but</span> 
+</span><span style="display: unset; font-weight: normal;">we sure are good at it</span><span style="display: unset;">.</span></p></div> 
+</div> 
+ <div class="u_1897614735 dmRespCol small-12 large-5 medium-5 dmSectionNoParallax" id="1897614735" data-gallery-bg="eyJzbGlkZXMiOlsiaHR0cHM6Ly9saXJwLmNkbi13ZWJzaXRlLmNvbS9mYWQ3OGQ2Ni9kbXMzcmVwL211bHRpL29wdC9WYWlkZWhpLTE5MjB3LmpwZyJdfQ=="> <div class="imageWidget align-center u_1714137087" data-element-type="image" data-widget-type="image" id="1714137087"><img src="https://lirp.cdn-website.com/fad78d66/dms3rep/multi/opt/IMG_6558-1920w.jpg" alt="" id="1937045033" class="" data-dm-image-path="https://irp.cdn-website.com/fad78d66/dms3rep/multi/IMG_6558.jpg" width="1200" height="1545" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1516643170" id="1516643170"> <div class="dmRespColsWrapper" id="1113347245"> <div class="dmRespCol large-12 medium-12 small-12" id="1459165610"> <div class="u_1958081519 dmNewParagraph" data-element-type="paragraph" id="1958081519" data-version="5" style="opacity: 1; transform: translate3d(0%, 0%, 0px); text-align: left; display: block;" data-anim-desktop="fadeInCombo" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6ImZhZGVJbkNvbWJvIiwiZHVyYXRpb24iOjEsImRlbGF5IjowLCJpbnRlbnNpdHkiOjEsImRpciI6InVwIiwicmV2ZXJzZSI6ZmFsc2V9fQ=="> <h3 class="m-size-62"><span class="m-font-size-62" m-font-size-set="true" style="display: initial;">An SEO approach that gets Google excited</span><span class="m-font-size-62" m-font-size-set="true" style="display: initial; color: rgb(255, 208, 91);">.</span></h3> 
+<p style="line-height: 1.1;"><span style="display: initial;"><br/></span></p></div> <div class="dmRespRow u_1516536329" id="1516536329"> <div class="dmRespColsWrapper" id="1211649978"> <div class="dmRespCol large-6 medium-6 small-12" id="1109963975"> <div class="u_1318383530 widget-832a29 dmCustomWidget" data-lazy-load="" data-title="" id="1318383530" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="832a29738c2b44fdb4e63369b1bf458a" data-widget-version="78" data-widget-config="eyJpdGVtcyI6W3sidGl0bGUiOiJTRU8ga2V5d29yZCBtYXAiLCJoZWFkaW5nVHlwZSI6Img0IiwiZGVzY3JpcHRpb24iOiI8cCBjbGFzcz1cInJ0ZUJsb2NrXCI+SGFsZiBTRU8gc3RyYXRlZ3ksIGhhbGYgY29tbW9uIHNlbnNlLiBXZSBkbyBvdXIgR29vZ2xlIGtleXdvcmQgcmVzZWFyY2ggdG8gZmluZCB5b3VyIHJlbGV2YW50IGhpZ2ggdHJhZmZpYyBrZXl3b3JkcyB3aXRoIGxvdyBjb21wZXRpdGlvbi4gVGhlc2UgYXJlIHlvdXIgYmVzdCBiZXQgZm9yIGdldHRpbmcgcmFua2VkLjwvcD48YnI+PHAgY2xhc3M9XCJydGVCbG9ja1wiPlRoZW4sIHdlIGJ1aWxkIGEgbWFwIG9mIHRoZSBtYWluIHBhZ2VzIG9uIHlvdXIgd2Vic2l0ZSwgYW5kIGxheSBvdXQgd2hpY2gga2V5d29yZHMgZWFjaCBwYWdlIHNob3VsZCByYW5rIGZvciwgYWxvbmcgd2l0aCBzdWdnZXN0ZWQgaGVhZGluZyB0aXRsZXMsIFVSTCBzbHVnIGNoYW5nZXMsIEgxcyBhbmQgbWV0YSBkZXNjcmlwdGlvbnMuIFdlIGVuc3VyZSBhbGwgb2YgdGhlc2UgYXJlIGtleXdvcmQtcmljaCBhbmQgdXNlIGJlc3QgcHJhY3RpY2VzLCBsaWtlIG5vIHVuZGVyc2NvcmVzIGZvciBVUkwgc2x1Z3MsIGtlZXBpbmcgSDFzIHVuZGVyIDYwIGNoYXJhY3RlcnMsIGFuZCBzbyBvbi48L3A+IiwiaWNvbiI6IjxzdmcgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2Z1wiIHdpZHRoPVwiMTAwJVwiIGhlaWdodD1cIjEwMCVcIiB2aWV3Qm94PVwiMCAwIDE3OTIgMTc5MlwiPjxwYXRoIGZpbGw9XCJpbmhlcml0XCIgZD1cIk0xNjcxIDU2NnEwIDQwLTI4IDY4bC03MjQgNzI0LTEzNiAxMzZxLTI4IDI4LTY4IDI4dC02OC0yOGwtMTM2LTEzNi0zNjItMzYycS0yOC0yOC0yOC02OHQyOC02OGwxMzYtMTM2cTI4LTI4IDY4LTI4dDY4IDI4bDI5NCAyOTUgNjU2LTY1N3EyOC0yOCA2OC0yOHQ2OCAyOGwxMzYgMTM2cTI4IDI4IDI4IDY4elwiIC8+PC9zdmc+In0seyJ0aXRsZSI6IlRlY2huaWNhbCBTRU8gc2l0ZSBhdWRpdCIsImhlYWRpbmdUeXBlIjoiaDQiLCJkZXNjcmlwdGlvbiI6IjxwIGNsYXNzPVwicnRlQmxvY2tcIj5XZSBwdXQgYSBiaWcgZW1waGFzaXMgb24gdGhlIGhlYWx0aCBvZiB5b3VyIHdlYnNpdGUuIFdlIGtub3cgR29vZ2xlIGRlZXBseSBjYXJlcyBhYm91dCB0aGUgZXhwZXJpZW5jZSBvZiB0aGVpciB1c2VycywgYW5kIHBlbmFsaXNlIGFueSB3ZWJzaXRlIHRoYXQgaXNu4oCZdCBwbGF5aW5nIG5pY2Ugd2l0aCB2aXNpdG9ycy4gV2XigJlyZSB0YWxraW5nIGFib3V0OjwvcD48dWwgY2xhc3M9XCJydGVCbG9jayBkZWZhdWx0TGlzdFwiPjxsaT5zbG93IHBhZ2UgbG9hZCB0aW1lLjwvbGk+PGxpPm1vYmlsZSByZXNwb25zaXZlbmVzcy48L2xpPjxsaT5wb29yIGFjY2Vzc2liaWxpdHkgc2V0dGluZ3MgbGlrZSBsb3cgY29udHJhc3QgZm9udHMgb3IgbGFjayBvZiBhbHQgdGFncy48L2xpPjxsaT5yZWRpcmVjdCBjaGFpbnMuPC9saT48L3VsPjxwIGNsYXNzPVwicnRlQmxvY2tcIj5UaGUgbGlzdCBnb2VzIG9uLiBUbyBnaXZlIHlvdSBhbiBpZGVhIG9mIHRoZSBtYWduaXR1ZGUgb2YgdGhlIHRob3JvdWdobmVzcyBvZiB0aGlzIGF1ZGl0LCB3ZSB0ZXN0IGV2ZXJ5IHBhZ2Ugb2YgeW91ciB3ZWJzaXRlIGFnYWluc3QgNDYgcG9zc2libGUgY3JpdGljYWwgZXJyb3JzLCA1MyB3YXJuaW5ncywgYW5kIDM1IG5vdGljZXMuIFdlIHdvcmsgb3VyIHdheSB0aHJvdWdoIHJlc29sdmluZyB0aGUgZXJyb3JzIGluIG9yZGVyIG9mIGltcG9ydGFuY2UuwqA8L3A+PGJyPjxwIGNsYXNzPVwicnRlQmxvY2tcIj5UaGlzIHByb2Nlc3MgYWxvbmUgY2FuIHRha2UgbW9udGhzLCBidXQgaXQgZGVwZW5kcyBvbiB5b3VyIHNjb3JlLiBGb3IgZXhhbXBsZSwgb3VyIG1vc3Qgc2lnbmlmaWNhbnQgYXVkaXQgdG8gZGF0ZSBpZGVudGlmaWVkIDE2OCBlcnJvcnMsIDMsMDIwIHdhcm5pbmdzLCBhbmQgOTk4IG5vdGljZXMuIEFub3RoZXIgdGltZSwgd2UgaGFkIGEgY2xpZW50IHdpdGggYW4gYWxtb3N0IHBlcmZlY3Qgc2NvcmUhPC9wPiIsImljb24iOiI8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmlld0JveD1cIjAgMCAxNzkyIDE3OTJcIj48cGF0aCBmaWxsPVwiaW5oZXJpdFwiIGQ9XCJNMTY3MSA1NjZxMCA0MC0yOCA2OGwtNzI0IDcyNC0xMzYgMTM2cS0yOCAyOC02OCAyOHQtNjgtMjhsLTEzNi0xMzYtMzYyLTM2MnEtMjgtMjgtMjgtNjh0MjgtNjhsMTM2LTEzNnEyOC0yOCA2OC0yOHQ2OCAyOGwyOTQgMjk1IDY1Ni02NTdxMjgtMjggNjgtMjh0NjggMjhsMTM2IDEzNnEyOCAyOCAyOCA2OHpcIiAvPjwvc3ZnPiJ9LHsidGl0bGUiOiJTRU8gY29udGVudCBnZW5lcmF0aW9uIiwiaGVhZGluZ1R5cGUiOiJoNCIsImRlc2NyaXB0aW9uIjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPllvdXIgd2Vic2l0ZSBjYW7igJl0IHJhbmsgZm9yIGtleXdvcmRzIGlmIHRoZXkgYXJlbuKAmXQgd3JpdHRlbiBvbiB5b3VyIHdlYnNpdGUsIHNvIGdlbmVyYXRpbmcgY29udGVudCBpcyBhIGJpZyBmb2N1cyBmb3IgdXMuIFdlIMKgbG9vayBhdCB5b3VyIG1haW4gcGFnZXMgKGFzIGlkZW50aWZpZWQgaW4gdGhlIGtleXdvcmQgbWFwKSBhbmQgY29uc2lkZXIgdGhlIGNvbnRlbnQgb24gZWFjaCBvZiB0aGVzZSBwYWdlcy4gSXMgdGhlcmUgZW5vdWdoIGNvbnRlbnQ/IE9yIHRvbyBtdWNoPyBJcyB0aGUgY29udGVudCBldmVuIHJlbGV2YW50PyBIb3cgY2FuIGl0IGJlIG9wdGltaXNlZCB0byBiZXR0ZXIgbWF0Y2ggd2hhdCBwZW9wbGUgYXJlIGxvb2tpbmcgZm9yPzwvcD48YnI+PHAgY2xhc3M9XCJydGVCbG9ja1wiPldlIGNhbiBncmFkdWFsbHkgcmV3cml0ZSB5b3VyIHdlYnNpdGUgd2l0aCBmcmVzaCBjb250ZW50IHRvIGhlbHAgd2l0aCB5b3VyIHJhbmtpbmdzLiBPbmNlIHdl4oCZdmUgZ290IHRoZSBtYWluIHBhZ2VzIHNvcnRlZCwgd2UgZm9jdXMgb24gYmxvZ3MuIFRoaXMgaXMgYSBuZXZlci1lbmRpbmcgYWN0aXZpdHkgb2YgZ2VuZXJhdGluZyBpbnRlcmVzdCBpbiB5b3VyIHdlYnNpdGUsIHNvIHRoYXQgR29vZ2xlIGtub3dzIHlvdeKAmXJlIGhlbHBpbmcgeW91ciBwcm9zcGVjdGl2ZSBjdXN0b21lcnMgZmluZCB0aGUgaW5mb3JtYXRpb24gdGhleSYjeDI3O3JlIHNlYXJjaGluZyBmb3IuPC9wPiIsImljb24iOiI8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmlld0JveD1cIjAgMCAxNzkyIDE3OTJcIj48cGF0aCBmaWxsPVwiaW5oZXJpdFwiIGQ9XCJNMTY3MSA1NjZxMCA0MC0yOCA2OGwtNzI0IDcyNC0xMzYgMTM2cS0yOCAyOC02OCAyOHQtNjgtMjhsLTEzNi0xMzYtMzYyLTM2MnEtMjgtMjgtMjgtNjh0MjgtNjhsMTM2LTEzNnEyOC0yOCA2OC0yOHQ2OCAyOGwyOTQgMjk1IDY1Ni02NTdxMjgtMjggNjgtMjh0NjggMjhsMTM2IDEzNnEyOCAyOCAyOCA2OHpcIiAvPjwvc3ZnPiJ9LHsidGl0bGUiOiJMaW5rIGJ1aWxkaW5nICYgRG9tYWluIEF1dGhvcml0eSIsImhlYWRpbmdUeXBlIjoiaDQiLCJkZXNjcmlwdGlvbiI6IjxwIGNsYXNzPVwicnRlQmxvY2tcIj5UaGUgbGFzdCBwaWVjZSBvZiB0aGUgcHV6emxlIGlzIGdldHRpbmcgb3RoZXIgd2Vic2l0ZXMgdG8gbGluayB0byB5b3Vycy4gWW91IG1heSBoYXZlIGhlYXJkIHRoaXMgZGVzY3JpYmVkIGFzICZxdW90O2luY3JlYXNpbmcgdGhlIHF1YW50aXR5IGFuZCBxdWFsaXR5IG9mIHlvdXIgYmFja2xpbmtzJnF1b3Q7LjwvcD48YnI+PHAgY2xhc3M9XCJydGVCbG9ja1wiPlRoZXJl4oCZcyB0aGlzIHRoaW5nIGNhbGxlZCDigJxEb21haW4gQXV0aG9yaXR54oCdIG9yIERBLCBhbmQgdGhpcyBpcyBhIHNjb3JlIG91dCBvZiAxMDAgdGhhdCBkZXNjcmliZXMgaG93IGNyZWRpYmxlIHlvdXIgd2Vic2l0ZSBpcyBpbiB0aGUgZXllcyBvZiBzZWFyY2ggZW5naW5lcywgbGlrZSBHb29nbGUuIEEgbmV3IHdlYnNpdGUgd2lsbCBzdGFydCBhdCAwLzEwMCwgYW5kIGEgbXVsdGluYXRpb25hbCB3ZWJzaXRlIChsaWtlIEdvb2dsZSB0aGVtc2VsdmVzKSB3aWxsIHNpdCBhdCBoaWdoIGVuZCBvZiB0aGUgOTBzLiBUaGUgaGlnaGVyIHRoaXMgbnVtYmVyLCB0aGUgYmV0dGVyIHRoZSBjaGFuY2Ugb2YgeW91ciB3ZWJzaXRlIG91dHJhbmtpbmcgeW91ciBjb21wZXRpdG9ycyBmb3IgeW91ciBjaG9zZW4ga2V5d29yZHMuIElmIHlvdSBoYXZlIGEgaGlnaGVyIERBIHRoYW4geW91ciBjb21wZXRpdG9yLCBHb29nbGUgd2lsbCBwcm9iYWJseSBwdXQgeW91ciB3ZWJzaXRlIGZpcnN0IChpdOKAmXMgbm90IHF1aXRlIHRoYXQgc3RyYWlnaHQgZm9yd2FyZCwgYnV0IHlvdSBnZXQgdGhlIHBvaW50KS48L3A+PGJyPjxwIGNsYXNzPVwicnRlQmxvY2tcIj5TbyBob3cgZG8gd2UgZ28gYWJvdXQgaW5jcmVhc2luZyB5b3VyIERBPyBJdOKAmXMgYWJvdXQgcG9wdWxhcml0eS4gV2XigJlyZSB0YWxraW5nIGFib3V0IHdlYnNpdGUgdHJhZmZpYyBhbmQgdGhlIG51bWJlciBvZiByZWZlcnJpbmcgZG9tYWlucy4gSWYgc2VhcmNoIGVuZ2luZXMgY2FuIHNlZSB0aGF0IHRvbm5lcyBvZiBvdGhlciBoaWdobHkgcmVnYXJkZWQgd2Vic2l0ZXMgYXJlIGxpbmtpbmcgdG8geW91LCB0aGVuIHlvdSBtdXN0IGFsc28gYmUgYSBoaWdobHkgcmVnYXJkZWQgd2Vic2l0ZSwgYW5kIHdvcnRoeSBvZiBzZW5kaW5nIHZpc2l0b3JzIHRvLjwvcD4iLCJpY29uIjoiPHN2ZyB4bWxucz1cImh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnXCIgd2lkdGg9XCIxMDAlXCIgaGVpZ2h0PVwiMTAwJVwiIHZpZXdCb3g9XCIwIDAgMTc5MiAxNzkyXCI+PHBhdGggZmlsbD1cImluaGVyaXRcIiBkPVwiTTE2NzEgNTY2cTAgNDAtMjggNjhsLTcyNCA3MjQtMTM2IDEzNnEtMjggMjgtNjggMjh0LTY4LTI4bC0xMzYtMTM2LTM2Mi0zNjJxLTI4LTI4LTI4LTY4dDI4LTY4bDEzNi0xMzZxMjgtMjggNjgtMjh0NjggMjhsMjk0IDI5NSA2NTYtNjU3cTI4LTI4IDY4LTI4dDY4IDI4bDEzNiAxMzZxMjggMjggMjggNjh6XCIgLz48L3N2Zz4ifSx7InRpdGxlIjoiTW9uaXRvcmluZyAmIGFuYWx5c2lzIiwiaGVhZGluZ1R5cGUiOiJoNCIsImRlc2NyaXB0aW9uIjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPlNFTyBhY3Rpdml0aWVzIGRvbiYjeDI3O3QgbWVhbiBhbnl0aGluZyB1bmxlc3MgdGhleSBnZW5lcmF0ZSByZXN1bHRzIGFuZCBhbiBST0kgZm9yIHlvdXIgYnVzaW5lc3MuPC9wPjxicj48cCBjbGFzcz1cInJ0ZUJsb2NrXCI+VXNpbmcgY2xldmVyIFNFTyBzb2Z0d2FyZSwgV2UgY29uc3RhbnRseSBtb25pdG9yIG91ciBlZmZvcnRzIGZvciBpbXByb3ZlbWVudHMgYW5kIGZlZWRiYWNrIHNvIHlvdXIgc2l0ZSBjYW4gYmUgZnVydGhlciBvcHRpbWlzZWQuPC9wPjxicj48cCBjbGFzcz1cInJ0ZUJsb2NrXCI+V2XigJlsbCBzaG93IHlvdSB0aGUga2V5d29yZHMgeW91JiN4Mjc7dmUgc3RhcnRlZCByYW5raW5nIGZvciwgaG93IG11Y2ggd2Vic2l0ZSB0cmFmZmljIHRoaXMgaGFzIGdlbmVyYXRlZCwgYW5kIGFsc28gdGhlIHZhbHVlIG9mIHRoYXQgdHJhZmZpYy4gQWx0aG91Z2ggdGhlIFJPSSB5b3UgZ2V0IGZyb20gc2FsZXMgd2lsbCBhbHdheXMgYmUgdGhlIHVsdGltYXRlIGZpZ3VyZSB0byBmb2N1cyBvbiwgd2UgZG8gbGlrZSB0byBjb21tdW5pY2F0ZSB0aGUgdmFsdWUgb2YgdGhlIHRyYWZmaWMgd2UgZ2VuZXJhdGUsIGFzIHRoaXMgaXMgYW4gZWFzeSB3YXkgdG8gZGVzY3JpYmUgdGhlIHJlbGF0aXZlIGNoYW5nZXMgYW5kIGltcHJvdmVtZW50cyBtYWRlIGVhY2ggbW9udGguPC9wPiIsImljb24iOiI8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmlld0JveD1cIjAgMCAxNzkyIDE3OTJcIj48cGF0aCBmaWxsPVwiaW5oZXJpdFwiIGQ9XCJNMTY3MSA1NjZxMCA0MC0yOCA2OGwtNzI0IDcyNC0xMzYgMTM2cS0yOCAyOC02OCAyOHQtNjgtMjhsLTEzNi0xMzYtMzYyLTM2MnEtMjgtMjgtMjgtNjh0MjgtNjhsMTM2LTEzNnEyOC0yOCA2OC0yOHQ2OCAyOGwyOTQgMjk1IDY1Ni02NTdxMjgtMjggNjgtMjh0NjggMjhsMTM2IDEzNnEyOCAyOCAyOCA2OHpcIiAvPjwvc3ZnPiJ9XSwiZXhwYW5kRmlyc3RJdGVtIjpmYWxzZSwiY29sbGFwc2VPdGhlcnMiOnRydWUsImxheW91dCI6InJvdW5kZWRJY29uIiwic2NoZW1hIjpmYWxzZX0="> <ul class="accordion-wrapper roundedIcon  " data-first-expanded="false"> <li class="accordion-item"> <div class="accordion-title"> <div class="title-text"> <h4>SEO keyword map</h4> 
+</div> 
+ <div class="arrow-wrapper"> <div class="arrow"> <svg class="close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1152 1792" style="background-color:inherit !important" fill="currentColor"> <path fill="inherit" d="M1075 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path> 
+</svg> 
+</div> 
+</div> 
+</div> 
+ <div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">Half SEO strategy, half common sense. We do our Google keyword research to find your relevant high traffic keywords with low competition. These are your best bet for getting ranked.</p><br/><p class="rteBlock">Then, we build a map of the main pages on your website, and lay out which keywords each page should rank for, along with suggested heading titles, URL slug changes, H1s and meta descriptions. We ensure all of these are keyword-rich and use best practices, like no underscores for URL slugs, keeping H1s under 60 characters, and so on.</p></div> 
+</div> 
+</div> 
+</li> 
+ <li class="accordion-item"> <div class="accordion-title"> <div class="title-text"> <h4>Technical SEO site audit</h4> 
+</div> 
+ <div class="arrow-wrapper"> <div class="arrow"> <svg class="close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1152 1792" style="background-color:inherit !important" fill="currentColor"> <path fill="inherit" d="M1075 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path> 
+</svg> 
+</div> 
+</div> 
+</div> 
+ <div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">We put a big emphasis on the health of your website. We know Google deeply cares about the experience of their users, and penalise any website that isn&rsquo;t playing nice with visitors. We&rsquo;re talking about:</p> <ul class="rteBlock defaultList"><li>slow page load time.</li><li>mobile responsiveness.</li><li>poor accessibility settings like low contrast fonts or lack of alt tags.</li><li>redirect chains.</li></ul> 
+<p class="rteBlock">The list goes on. To give you an idea of the magnitude of the thoroughness of this audit, we test every page of your website against 46 possible critical errors, 53 warnings, and 35 notices. We work our way through resolving the errors in order of importance.&nbsp;</p><br/><p class="rteBlock">This process alone can take months, but it depends on your score. For example, our most significant audit to date identified 168 errors, 3,020 warnings, and 998 notices. Another time, we had a client with an almost perfect score!</p></div> 
+</div> 
+</div> 
+</li> 
+ <li class="accordion-item"> <div class="accordion-title"> <div class="title-text"> <h4>SEO content generation</h4> 
+</div> 
+ <div class="arrow-wrapper"> <div class="arrow"> <svg class="close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1152 1792" style="background-color:inherit !important" fill="currentColor"> <path fill="inherit" d="M1075 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path> 
+</svg> 
+</div> 
+</div> 
+</div> 
+ <div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">Your website can&rsquo;t rank for keywords if they aren&rsquo;t written on your website, so generating content is a big focus for us. We &nbsp;look at your main pages (as identified in the keyword map) and consider the content on each of these pages. Is there enough content? Or too much? Is the content even relevant? How can it be optimised to better match what people are looking for?</p><br/><p class="rteBlock">We can gradually rewrite your website with fresh content to help with your rankings. Once we&rsquo;ve got the main pages sorted, we focus on blogs. This is a never-ending activity of generating interest in your website, so that Google knows you&rsquo;re helping your prospective customers find the information they're searching for.</p></div> 
+</div> 
+</div> 
+</li> 
+ <li class="accordion-item"> <div class="accordion-title"> <div class="title-text"> <h4>Link building &amp; Domain Authority</h4> 
+</div> 
+ <div class="arrow-wrapper"> <div class="arrow"> <svg class="close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1152 1792" style="background-color:inherit !important" fill="currentColor"> <path fill="inherit" d="M1075 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path> 
+</svg> 
+</div> 
+</div> 
+</div> 
+ <div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">The last piece of the puzzle is getting other websites to link to yours. You may have heard this described as &quot;increasing the quantity and quality of your backlinks&quot;.</p><br/><p class="rteBlock">There&rsquo;s this thing called &ldquo;Domain Authority&rdquo; or DA, and this is a score out of 100 that describes how credible your website is in the eyes of search engines, like Google. A new website will start at 0/100, and a multinational website (like Google themselves) will sit at high end of the 90s. The higher this number, the better the chance of your website outranking your competitors for your chosen keywords. If you have a higher DA than your competitor, Google will probably put your website first (it&rsquo;s not quite that straight forward, but you get the point).</p><br/><p class="rteBlock">So how do we go about increasing your DA? It&rsquo;s about popularity. We&rsquo;re talking about website traffic and the number of referring domains. If search engines can see that tonnes of other highly regarded websites are linking to you, then you must also be a highly regarded website, and worthy of sending visitors to.</p></div> 
+</div> 
+</div> 
+</li> 
+ <li class="accordion-item"> <div class="accordion-title"> <div class="title-text"> <h4>Monitoring &amp; analysis</h4> 
+</div> 
+ <div class="arrow-wrapper"> <div class="arrow"> <svg class="close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1152 1792" style="background-color:inherit !important" fill="currentColor"> <path fill="inherit" d="M1075 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path> 
+</svg> 
+</div> 
+</div> 
+</div> 
+ <div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">SEO activities don't mean anything unless they generate results and an ROI for your business.</p><br/><p class="rteBlock">Using clever SEO software, We constantly monitor our efforts for improvements and feedback so your site can be further optimised.</p><br/><p class="rteBlock">We&rsquo;ll show you the keywords you've started ranking for, how much website traffic this has generated, and also the value of that traffic. Although the ROI you get from sales will always be the ultimate figure to focus on, we do like to communicate the value of the traffic we generate, as this is an easy way to describe the relative changes and improvements made each month.</p></div> 
+</div> 
+</div> 
+</li> 
+</ul> 
+</div> 
+</div> 
+ <div class="dmRespCol large-6 medium-6 small-12" id="1090159802"> <div class="imageWidget align-center u_1076271485" data-element-type="image" data-widget-type="image" id="1076271485"><img src="https://lirp.cdn-website.com/fad78d66/dms3rep/multi/opt/IMG_6621-1920w.jpg" alt="" id="1245669985" class="" data-dm-image-path="https://irp.cdn-website.com/fad78d66/dms3rep/multi/IMG_6621.jpg" width="1200" height="885" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1421004901" id="1421004901"> <div class="dmRespColsWrapper" id="1317256114"> <div class="dmRespCol large-12 medium-12 small-12" id="1854888185"> <div class="u_1591219996 dmNewParagraph" data-element-type="paragraph" id="1591219996" data-version="5" style="opacity: 1; transform: translate3d(0%, 0%, 0px); text-align: left; display: block;" data-anim-desktop="fadeInCombo" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6ImZhZGVJbkNvbWJvIiwiZHVyYXRpb24iOjEsImRlbGF5IjowLCJpbnRlbnNpdHkiOjEsImRpciI6InVwIiwicmV2ZXJzZSI6ZmFsc2V9fQ=="> <h3 class="m-size-62"><span class="m-font-size-62" m-font-size-set="true" style="display: initial;">Our SEO clients love us because we're</span><span class="m-font-size-62" m-font-size-set="true" style="display: initial; color: rgb(255, 208, 91);">...</span></h3> 
+<p style="line-height: 1.1;"><span style="display: initial;"><br/></span></p></div> <div class="u_1345093287 widget-7b2ba5 dmCustomWidget" data-lazy-load="" data-title="" id="1345093287" dmle_extension="custom_extension" data-element-type="custom_extension" data-anim-desktop="fadeInUp" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6ImZhZGVJblVwIn19" icon="false" surround="false" data-widget-id="7b2ba547771b4d4db17e3e2b9f0abd0c" data-widget-version="225" data-widget-config="eyJ0YWJzIjpbeyJpbWFnZSI6Imh0dHBzOi8vZGQtY2RuLm11bHRpc2NyZWVuc2l0ZS5jb20vZWRpdG9yL3RhYnMvTGFyZ2VfbGVhdmVzLmpwZyIsIml0ZW1MYWJlbCI6IkhvbmVzdCAmIHRyYW5zcGFyZW50IiwiaGVhZGluZ1R5cGUiOiJoNCIsIml0ZW1UaXRsZSI6IiIsIml0ZW1EZXNjIjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPllvdSBtaWdodCBiZSBjb21pbmcgdG8gdXMgcHJldHR5IGRhcm4gc2tlcHRpY2FsIGFib3V0IHRoaXMgd2hvbGUgU0VPIGJ1c2luZXNzLCBhbmQgdGhhdOKAmXMgdW5kZXJzdGFuZGFibGUuIEhvcGVmdWxseSwgeW91JiN4Mjc7bGwgZmluZCBpdCBjb21mb3J0aW5nIHRvIGtub3cgdGhhdCB3ZSByZWFsbHkgdmFsdWUgdHJhbnNwYXJlbmN5IGFuZCByZWFsaXNtLiBXZSBrbm93IDxzdHJvbmc+c29tZSBidXNpbmVzc2VzIHdpbGwgYWNoaWV2ZSBpbmNyZWRpYmxlIHJlc3VsdHMgdGhyb3VnaCBvdXIgU0VPIHNlcnZpY2VzLCBhbmQgc29tZSB3b27igJl0PC9zdHJvbmc+LiBXZeKAmWQgcHJlZmVyIHRvIGJlIHVwZnJvbnQgYWJvdXQgdGhpcyBhbmQgaGF2ZSBhIGJhY2stdXAgcGxhbi4gQWZ0ZXIgYWxsLCBpdOKAmXMgbGl0ZXJhbGx5IGltcG9zc2libGUgZm9yIGV2ZXJ5IGJ1c2luZXNzIHRvIGJlIGluIHRoZSB0b3Agc3BvdCBvbiBHb29nbGUg4oCUIHNvbWV0aW1lcyBpdOKAmXMganVzdCBub3QgZWNvbm9taWNhbCB0byBjb21wZXRlIGZvciB0aGlzIHBsYWNlbWVudC7CoDwvcD48YnI+PHAgY2xhc3M9XCJydGVCbG9ja1wiPlNvLCBpZiB3ZSB0aGluayBTRU8gaXNu4oCZdCBnb2luZyB0byB3b3JrIGZvciB5b3UsIHJhdGhlciB0aGFuIHdhc3RlIHlvdXIgdGltZSBhbmQgbW9uZXksIHdl4oCZbGwgdGVsbCB5b3Ugd2h5IGFuZCB3aGF0IHdlIHRoaW5rIHdpbGwgd29yayBiZXR0ZXIuPC9wPiIsInNob3dCdG4iOmZhbHNlLCJ0ZXh0T25MaW5rIjoiSXRlbSBMaW5rIn0seyJpbWFnZSI6Imh0dHBzOi8vZGQtY2RuLm11bHRpc2NyZWVuc2l0ZS5jb20vZWRpdG9yL3RhYnMvTGFyZ2VfbGVhdmVzLmpwZyIsIml0ZW1MYWJlbCI6IlBhc3Npb25hdGUgJiBzYXZ2eSIsImhlYWRpbmdUeXBlIjoiaDQiLCJpdGVtVGl0bGUiOiIiLCJpdGVtRGVzYyI6IjxwIGNsYXNzPVwicnRlQmxvY2tcIj5XZeKAmXJlIGRyaXZlbiwgaGFyZHdvcmtpbmcsIGV2ZXItbGVhcm5pbmcgKGFuZCBob25lc3RseSwgbm90IGJhZCBsb29raW5nKSBTRU8gZXhwZXJ0cywgcmVhZHkgdG8gcm9sbCB1cCBvdXIgc2xlZXZlcy4gV2XigJlyZSBhYnNvbHV0ZWx5IGNvbW1pdHRlZCB0byBtYWtpbmcgU0VPIHdvcmsgZm9yIHlvdSBhbmQgZ2l2aW5nIHlvdSB0aGUgYmVzdCBjaGFuY2UgcG9zc2libGUuPC9wPjxicj48cCBjbGFzcz1cInJ0ZUJsb2NrXCI+V2UgZXhjZWwgZm9yIG91ciBjbGllbnRzIGJlY2F1c2Ugd2UmI3gyNztyZcKgY29tbWl0dGVkIHRvIHRoZW0uIFdlJiN4Mjc7cmUgYXNwaXJhdGlvbmFsIGFuZCB3YW50IHRvIGdldCBiZXR0ZXIgcmVzdWx0cyB0aGFuIHdlIGRpZCB5ZXN0ZXJkYXkgdG8gY3JlYXRlIGEgd2lubmluZyBwYXJ0bmVyc2hpcCB3aXRoIHlvdS48L3A+PGJyPjxwIGNsYXNzPVwicnRlQmxvY2tcIj5OZXZlciBmZWVsIGxpa2UgeW914oCZcmUgYmVpbmcgbmVnbGVjdGVkIGFnYWluLCBvciB0aGF0IHlvdeKAmXJlIOKAnHRvbyBzbWFsbCBmb3IgYW4gYWdlbmN54oCdLiBXZSYjeDI3O2xsIGxvb2sgYWZ0ZXIgeW91LjwvcD4iLCJzaG93QnRuIjpmYWxzZSwidGV4dE9uTGluayI6Ikl0ZW0gTGluayJ9LHsiaW1hZ2UiOiJodHRwczovL2RkLWNkbi5tdWx0aXNjcmVlbnNpdGUuY29tL2VkaXRvci90YWJzL0xhcmdlX2xlYXZlcy5qcGciLCJpdGVtTGFiZWwiOiJBZmZvcmRhYmxlICYgZ2VuZXJvdXMiLCJoZWFkaW5nVHlwZSI6Img0IiwiaXRlbVRpdGxlIjoiIiwiaXRlbURlc2MiOiI8cCBjbGFzcz1cInJ0ZUJsb2NrXCI+V2UgbG92ZSBiZWluZyBnZW5lcm91cyBhbmQga2VlcCBvdXIgcHJpY2VzIGFmZm9yZGJsZSBzbyBldmVuIHNtYWxsIGJ1c2luZXNzZXMgaGF2ZSBhIHNob3QgYXQgZ2V0dGluZyB0byB0aGUgdG9wIG9mIEdvb2dsZS7CoDwvcD48YnI+PHAgY2xhc3M9XCJydGVCbG9ja1wiPldlIGxpa2UgZ2l2aW5nIGNsaWVudHMg4oCcbm8gYnJhaW5lcuKAnSBkZWNpc2lvbnMuIFdoZW4gb3VyIGNvc3RzIGFyZSBhIGZyYWN0aW9uIG9mIHRoZSB2YWx1ZSB3ZSBkZWxpdmVyLCByZXRhaW5pbmcgdXMgaXMgYSBubyBicmFpbmVyLiBQbHVzLCB3ZSBrbm93IGxvY2staW4gY29udHJhY3RzIGFuZCBtaW5pbXVtIHRlcm1zIHN1Y2ssIHNvIHdlIGRvbiYjeDI3O3QgZG8gdGhvc2UuwqA8L3A+Iiwic2hvd0J0biI6ZmFsc2UsInRleHRPbkxpbmsiOiJJdGVtIExpbmsifV0sInNob3dJbWFnZXMiOmZhbHNlLCJsYXlvdXRzIjoibGF5b3V0LWEiLCJtb2JpbGVMYXlvdXRUb2dnbGUiOmZhbHNlLCJmdWxsV2lkdGhJbWciOnRydWV9"> <div class="wrapper layout-a"> <nav class="nav desktop  swipe-menu "> <div class="tab-label active layout-a "> <h4 class="horizontal-label">Honest &amp; transparent</h4> 
+</div> 
+ <div class="tab-label  layout-a not-active"> <h4 class="horizontal-label">Passionate &amp; savvy</h4> 
+</div> 
+ <div class="tab-label  layout-a not-active"> <h4 class="horizontal-label">Affordable &amp; generous</h4> 
+</div> 
+</nav> 
+ <div class="tab layout-a active 
+                "> <div class="tab-text-container"> <div class="tab-description"> <div class="desc-title"> <p class=""></p> 
+</div> 
+ <p></p> 
+<p class="rteBlock">You might be coming to us pretty darn skeptical about this whole SEO business, and that&rsquo;s understandable. Hopefully, you'll find it comforting to know that we really value transparency and realism. We know <strong>some businesses will achieve incredible results through our SEO services, and some won&rsquo;t</strong>. We&rsquo;d prefer to be upfront about this and have a back-up plan. After all, it&rsquo;s literally impossible for every business to be in the top spot on Google &mdash; sometimes it&rsquo;s just not economical to compete for this placement.&nbsp;</p><br/><p class="rteBlock">So, if we think SEO isn&rsquo;t going to work for you, rather than waste your time and money, we&rsquo;ll tell you why and what we think will work better.</p> <p></p> 
+</div> 
+ <div class="btn-container "></div> 
+</div> 
+</div> 
+ <div class="tab layout-a  
+                "> <div class="tab-text-container"> <div class="tab-description"> <div class="desc-title"> <p class=""></p> 
+</div> 
+ <p></p> 
+<p class="rteBlock">We&rsquo;re driven, hardworking, ever-learning (and honestly, not bad looking) SEO experts, ready to roll up our sleeves. We&rsquo;re absolutely committed to making SEO work for you and giving you the best chance possible.</p><br/><p class="rteBlock">We excel for our clients because we're&nbsp;committed to them. We're aspirational and want to get better results than we did yesterday to create a winning partnership with you.</p><br/><p class="rteBlock">Never feel like you&rsquo;re being neglected again, or that you&rsquo;re &ldquo;too small for an agency&rdquo;. We'll look after you.</p> <p></p> 
+</div> 
+ <div class="btn-container "></div> 
+</div> 
+</div> 
+ <div class="tab layout-a  
+                "> <div class="tab-text-container"> <div class="tab-description"> <div class="desc-title"> <p class=""></p> 
+</div> 
+ <p></p> 
+<p class="rteBlock">We love being generous and keep our prices affordble so even small businesses have a shot at getting to the top of Google.&nbsp;</p><br/><p class="rteBlock">We like giving clients &ldquo;no brainer&rdquo; decisions. When our costs are a fraction of the value we deliver, retaining us is a no brainer. Plus, we know lock-in contracts and minimum terms suck, so we don't do those.&nbsp;</p> <p></p> 
+</div> 
+ <div class="btn-container "></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow fullBleedChanged fullBleedMode u_1078748225" id="1078748225"> <div class="dmRespColsWrapper" id="1631505370"> <div class="dmRespCol large-12 medium-12 small-12 u_1327759015" id="1327759015"> <div data-element-type="spacer" class="u_1214828494 dmSpacer" id="1214828494"></div> 
+</div> 
+</div> 
+</div> 
+ <div class="dmRespRow u_1565477197" id="1565477197"> <div class="dmRespColsWrapper" id="1585451556"> <div class="dmRespCol large-12 medium-12 small-12" id="1467078660"> <div class="u_1749290517 dmNewParagraph" data-element-type="paragraph" id="1749290517" data-version="5" style="opacity: 1; transform: translate3d(0%, 0%, 0px); text-align: left; display: block;" data-anim-desktop="fadeInCombo" data-anim-extended="eyJkZXNrdG9wIjp7InRyaWdnZXIiOiJlbnRyYW5jZSIsImFuaW1hdGlvbiI6ImZhZGVJbkNvbWJvIiwiZHVyYXRpb24iOjEsImRlbGF5IjowLCJpbnRlbnNpdHkiOjEsImRpciI6InVwIiwicmV2ZXJzZSI6ZmFsc2V9fQ=="> <h3 class="m-size-62" style="line-height: 0.7;"><span class="m-font-size-62" m-font-size-set="true" style="display: initial;">Let's make SEO make sense</span><span class="m-font-size-62" m-font-size-set="true" style="display: initial; color: rgb(255, 208, 91);">.</span><span style="display: initial;"><br/></span></h3> 
+</div></div> 
+</div> 
+</div> 
+ <div class="u_1987046726 dmRespRow" id="1987046726"> <div class="dmRespColsWrapper" id="1442921244"> <div class="u_1762605806 dmRespCol small-12 large-6 medium-6" id="1762605806"> <div class="u_1439614429 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1439614429"><img src="https://lirp.cdn-website.com/fad78d66/dms3rep/multi/opt/SEO_Mockup-1fbb624f-1920w.png" alt="Website SEO Dashboard Example" id="1094529186" class="" data-dm-image-path="https://irp.cdn-website.com/fad78d66/dms3rep/multi/SEO_Mockup-1fbb624f.png" width="1202" height="975" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div class="u_1167832186 dmRespCol small-12 large-6 medium-6" id="1167832186"> <div class="u_1490249450 widget-832a29 dmCustomWidget" data-lazy-load="" data-title="" id="1490249450" dmle_extension="custom_extension" data-element-type="custom_extension" icon="false" surround="false" data-widget-id="832a29738c2b44fdb4e63369b1bf458a" data-widget-version="78" data-widget-config="eyJpdGVtcyI6W3sidGl0bGUiOiJIb3cgZG8gSSBnZXQgc3RhcnQgd2l0aCBTRU8gZm9yIG15IHdlYnNpdGU/IiwiaGVhZGluZ1R5cGUiOiJoNCIsImRlc2NyaXB0aW9uIjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPkl04oCZcyBzdXBlciBzaW1wbGUuIEZpbGwgb3V0IHRoaXMgPGEgdmFsdWU9XCJtZS1ib29rLWluLWZvcm1cIiBsYWJlbD1cIlwiIHR5cGU9XCJwYWdlXCIgaHJlZj1cIi9tZS1ib29rLWluLWZvcm1cIiBkYXRhLXJ1bnRpbWUtdXJsPVwiL21lLWJvb2staW4tZm9ybVwiPmZvcm08L2E+IGFuZCB3ZSYjeDI3O2xsIGFzc2lnbiB5b3UgYW4gQWNjb3VudCBNYW5hZ2VyIHdobyB3aWxsIGJlIGluIHRvdWNoIHRvIGdldCB0aGUgYmFsbCByb2xsaW5nLiBZb3XigJlsbCBiZSBsaW5rZWQgdGhyb3VnaCB0byBhbiBvbmxpbmUgYnJpZWZpbmcgZm9ybSB0aGF0IHlvdSBjYW4gY29tcGxldGUgd2hpbGUgeW914oCZcmUgd2FpdGluZy48L3A+PGJyPjxwIGNsYXNzPVwicnRlQmxvY2tcIj5JZiB5b3UmI3gyNztyZSBub3QgcmVhZHkgeWV0LCB3ZSYjeDI3O2QgbG92ZSB0byBjaGF0IHdpdGggeW91IGFib3V0IFNFTyBpbiBtb3JlIGRldGFpbC4gPGEgdmFsdWU9XCJjb250YWN0XCIgbGFiZWw9XCJcIiB0eXBlPVwicGFnZVwiIGhyZWY9XCIvY29udGFjdFwiIGRhdGEtcnVudGltZS11cmw9XCIvY29udGFjdFwiPkNhbGwgdXM8L2E+IGZvciBhbiBvYmxpZ2F0aW9uLWZyZWUgZGlzY292ZXJ5IHNlc3Npb24uPC9wPiIsImljb24iOiI8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmlld0JveD1cIjAgMCAxNzkyIDE3OTJcIj48cGF0aCBmaWxsPVwiaW5oZXJpdFwiIGQ9XCJNMTY3MSA1NjZxMCA0MC0yOCA2OGwtNzI0IDcyNC0xMzYgMTM2cS0yOCAyOC02OCAyOHQtNjgtMjhsLTEzNi0xMzYtMzYyLTM2MnEtMjgtMjgtMjgtNjh0MjgtNjhsMTM2LTEzNnEyOC0yOCA2OC0yOHQ2OCAyOGwyOTQgMjk1IDY1Ni02NTdxMjgtMjggNjgtMjh0NjggMjhsMTM2IDEzNnEyOCAyOCAyOCA2OHpcIiAvPjwvc3ZnPiJ9LHsidGl0bGUiOiJBbSBJIGd1YXJhbnRlZWQgcmVzdWx0cyBmcm9tIFNFTz8iLCJoZWFkaW5nVHlwZSI6Img0IiwiZGVzY3JpcHRpb24iOiI8cCBjbGFzcz1cInJ0ZUJsb2NrXCI+VW5mb3J0dW5hdGVseSwgaXQgZG9lc27igJl0IHdvcmsgdGhhdCB3YXkgKHdlIHdpc2ggaXQgZGlkISkuIEJ1dCwgd2Ugb2ZmZXIgYSBubyBsb2NrLWluIGNvbnRyYWN0IG9yIG1pbmltdW0gdGVybSBzbyB5b3UgY2FuIHdhbGsgYXdheSB0aGUgbW9tZW50IHlvdSBmZWVsIGxpa2UgeW91JiN4Mjc7cmUgbm90IGdldHRpbmcgdmFsdWUuPC9wPiIsImljb24iOiI8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmlld0JveD1cIjAgMCAxNzkyIDE3OTJcIj48cGF0aCBmaWxsPVwiaW5oZXJpdFwiIGQ9XCJNMTY3MSA1NjZxMCA0MC0yOCA2OGwtNzI0IDcyNC0xMzYgMTM2cS0yOCAyOC02OCAyOHQtNjgtMjhsLTEzNi0xMzYtMzYyLTM2MnEtMjgtMjgtMjgtNjh0MjgtNjhsMTM2LTEzNnEyOC0yOCA2OC0yOHQ2OCAyOGwyOTQgMjk1IDY1Ni02NTdxMjgtMjggNjgtMjh0NjggMjhsMTM2IDEzNnEyOCAyOCAyOCA2OHpcIiAvPjwvc3ZnPiJ9LHsidGl0bGUiOiJXaHkgZG9lcyBTRU8gdGFrZSB0aW1lIHRvIGdlbmVyYXRlIHJlc3VsdHM/IiwiaGVhZGluZ1R5cGUiOiJoNCIsImRlc2NyaXB0aW9uIjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPlNFTyBpcyBhIG5vdG9yaW91c2x5IHNsb3cgZGlnaXRhbCBtYXJrZXRpbmcgbWV0aG9kIHRoYXQgdGFrZXMgdGltZSB0byBzZWUgcmVzdWx0cyDigJQgYW5kIHRob3NlIHJlc3VsdHMgYXJlbiYjeDI3O3QgYWx3YXlzIGd1YXJhbnRlZWQuIFRoaXMgaXMgbW9zdGx5IGJlY2F1c2UgaXQgdGFrZXMgdGltZSBmb3Igc2VhcmNoIGVuZ2luZXMgdG8gcmVjcmF3bCB5b3VyIHdlYnNpdGUgYW5kIHJlY29nbmlzZSB0aGUgd29yayB0aGF0IHdlJiN4Mjc7dmUgZG9uZSwgYXMgd2VsbCBhcyBjb21wbGV4IHNlYXJjaCBhbGdvcml0aG1zIHRoYXQgYXJlIGFsd2F5cyBjaGFuZ2luZy4gRnVydGhlcm1vcmUsIHRoZSByZXBvcnRpbmcgdG9vbHMgYXJlIGRlbGF5ZWQgaW4gc2hvd2luZyB0aGVzZSByZXN1bHRzLsKgPC9wPjxicj48cCBjbGFzcz1cInJ0ZUJsb2NrXCI+V2UgY2FuIGNlcnRhaW5seSBzaG93IHlvdSBwcm9ncmVzcywgdGhvdWdoISBGb3IgZXhhbXBsZSwgaW5jcmVhc2VkIHBvc2l0aW9uIGZvciB0YXJnZXQga2V5d29yZHMgYW5kIGluY3JlYXNlZCBvcmdhbmljIHRyYWZmaWMuIEhvd2V2ZXIsIHRoaXMgbWF5IG5vdCB0cmFuc2xhdGUgaW50byBlbnF1aXJpZXMgaW1tZWRpYXRlbHkuIFVudGlsIHRoaXMgaGFwcGVucywgd2UgaGF2ZSBvbmdvaW5nIGFuZCB0cmFuc3BhcmVudCBjb252ZXJzYXRpb25zIGFib3V0IHRoZSBwcm9ncmVzcyBhbmQgaWYgdGhlIGFncmVlbWVudCBpcyBoZWFkaW5nIGluIHRoZSByaWdodCBkaXJlY3Rpb24uPC9wPiIsImljb24iOiI8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmlld0JveD1cIjAgMCAxNzkyIDE3OTJcIj48cGF0aCBmaWxsPVwiaW5oZXJpdFwiIGQ9XCJNMTY3MSA1NjZxMCA0MC0yOCA2OGwtNzI0IDcyNC0xMzYgMTM2cS0yOCAyOC02OCAyOHQtNjgtMjhsLTEzNi0xMzYtMzYyLTM2MnEtMjgtMjgtMjgtNjh0MjgtNjhsMTM2LTEzNnEyOC0yOCA2OC0yOHQ2OCAyOGwyOTQgMjk1IDY1Ni02NTdxMjgtMjggNjgtMjh0NjggMjhsMTM2IDEzNnEyOCAyOCAyOCA2OHpcIiAvPjwvc3ZnPiJ9LHsidGl0bGUiOiJXaHkgZXZlbiBib3RoZXIgd2l0aCBTRU8/IiwiaGVhZGluZ1R5cGUiOiJoNCIsImRlc2NyaXB0aW9uIjoiPHAgY2xhc3M9XCJydGVCbG9ja1wiPlNvLCBpZiBTRU8gaXMgYSByaXNrIGFuZCB0YWtlcyBhIGxvdCBvZiB0aW1lIGFuZCBlbmVyZ3ksIHdoeSBzaG91bGQgeW91IGJvdGhlciBjb25zaWRlcmluZyBpdD8gTGlrZSBtb3N0IHRoaW5ncywgdGhlIGhpZ2hlciB0aGUgcmlzaywgdGhlIGhpZ2hlciB0aGUgcmV3YXJkLjwvcD48YnI+PHAgY2xhc3M9XCJydGVCbG9ja1wiPlNFTyBpcyB1bmlxdWUsIGFzIG9uY2UgeW91IHNlY3VyZSBhIGhpZ2ggcG9zaXRpb24gZm9yIGEgaGlnaC10cmFmZmljIGtleXdvcmQsIHlvdSBhcmUgZWZmZWN0aXZlbHkgZ2V0dGluZyBmcmVlIGxlYWRzIGZvcmV2ZXIgYWZ0ZXIuIFdlIHNlZSBidXNpbmVzc2VzIGFjaGlldmUgd2Vic2l0ZSB0cmFmZmljIHdvcnRoIHRlbnMtb2YtdGhvdXNhbmRzIG9mIGRvbGxhcnMgZXZlcnkgbW9udGguwqA8L3A+PGJyPjxwIGNsYXNzPVwicnRlQmxvY2tcIj5TRU8gVGhvdWdodCBMZWFkZXIsIE5laWwgUGF0ZWwsIGV2ZW4gc2hvd3MgdXMgaG93IG92ZXIgZGVjYWRlcywgaGXigJlzIGJ1aWx0IGEgbW9udGhseSB0cmFmZmljIHZvbHVtZSBlcXVpdmFsZW50IHRvIGhpbSBzcGVuZGluZyAkNSBtaWxsaW9uIGEgbW9udGggb24gYWR2ZXJ0aXNpbmcuIE9idmlvdXNseSB0aGF04oCZcyBhbiBleHRyZW1lIGV4YW1wbGUsIGJ1dCB0aGUgcG9pbnQgaXMsIHdpdGggU0VPIHdlIGNhbiBidWlsZCBhIHN1c3RhaW5hYmxlIHNvdXJjZSBvZiB3ZWJzaXRlIHRyYWZmaWMgdGhhdCBjb252ZXJ0cyBpbnRvIGN1c3RvbWVycyBmb3IgeWVhcnMgdG8gY29tZSwgYW5kIHRoaXMgbWFrZXMgaXMgc2lnbmlmaWNhbnRseSBkaWZmZXJlbnQgdG8gYW55IG90aGVyIGFkdmVydGlzaW5nIGNoYW5uZWwuPC9wPiIsImljb24iOiI8c3ZnIHhtbG5zPVwiaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmdcIiB3aWR0aD1cIjEwMCVcIiBoZWlnaHQ9XCIxMDAlXCIgdmlld0JveD1cIjAgMCAxNzkyIDE3OTJcIj48cGF0aCBmaWxsPVwiaW5oZXJpdFwiIGQ9XCJNMTY3MSA1NjZxMCA0MC0yOCA2OGwtNzI0IDcyNC0xMzYgMTM2cS0yOCAyOC02OCAyOHQtNjgtMjhsLTEzNi0xMzYtMzYyLTM2MnEtMjgtMjgtMjgtNjh0MjgtNjhsMTM2LTEzNnEyOC0yOCA2OC0yOHQ2OCAyOGwyOTQgMjk1IDY1Ni02NTdxMjgtMjggNjgtMjh0NjggMjhsMTM2IDEzNnEyOCAyOCAyOCA2OHpcIiAvPjwvc3ZnPiJ9XSwiZXhwYW5kRmlyc3RJdGVtIjpmYWxzZSwiY29sbGFwc2VPdGhlcnMiOnRydWUsImxheW91dCI6InJvdW5kZWRJY29uIiwic2NoZW1hIjp0cnVlfQ=="><!-- FAQ Schema json-ld --> <script type="application/ld+json">
+
+
+
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        
+        {
+        "@type": "Question",
+        "name": "How do I get start with SEO for my website?",
+        "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<p class=\"rteBlock\">It’s super simple. Fill out this <a value=\"me-book-in-form\" label=\"\" type=\"page\" href="http://www.heliummarketing.agency/\&quot;/me-book-in-form\&quot;" data-runtime-url=\"/me-book-in-form\">form</a> and we&#x27;ll assign you an Account Manager who will be in touch to get the ball rolling. You’ll be linked through to an online briefing form that you can complete while you’re waiting.</p><br><p class=\"rteBlock\">If you&#x27;re not ready yet, we&#x27;d love to chat with you about SEO in more detail. <a value=\"contact\" label=\"\" type=\"page\" href="http://www.heliummarketing.agency/\&quot;/contact\&quot;" data-runtime-url=\"/contact\">Call us</a> for an obligation-free discovery session.</p>"
+            }
+        }
+        ,
+        
+        {
+        "@type": "Question",
+        "name": "Am I guaranteed results from SEO?",
+        "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<p class=\"rteBlock\">Unfortunately, it doesn’t work that way (we wish it did!). But, we offer a no lock-in contract or minimum term so you can walk away the moment you feel like you&#x27;re not getting value.</p>"
+            }
+        }
+        ,
+        
+        {
+        "@type": "Question",
+        "name": "Why does SEO take time to generate results?",
+        "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<p class=\"rteBlock\">SEO is a notoriously slow digital marketing method that takes time to see results — and those results aren&#x27;t always guaranteed. This is mostly because it takes time for search engines to recrawl your website and recognise the work that we&#x27;ve done, as well as complex search algorithms that are always changing. Furthermore, the reporting tools are delayed in showing these results. </p><br><p class=\"rteBlock\">We can certainly show you progress, though! For example, increased position for target keywords and increased organic traffic. However, this may not translate into enquiries immediately. Until this happens, we have ongoing and transparent conversations about the progress and if the agreement is heading in the right direction.</p>"
+            }
+        }
+        ,
+        
+        {
+        "@type": "Question",
+        "name": "Why even bother with SEO?",
+        "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "<p class=\"rteBlock\">So, if SEO is a risk and takes a lot of time and energy, why should you bother considering it? Like most things, the higher the risk, the higher the reward.</p><br><p class=\"rteBlock\">SEO is unique, as once you secure a high position for a high-traffic keyword, you are effectively getting free leads forever after. We see businesses achieve website traffic worth tens-of-thousands of dollars every month. </p><br><p class=\"rteBlock\">SEO Thought Leader, Neil Patel, even shows us how over decades, he’s built a monthly traffic volume equivalent to him spending $5 million a month on advertising. Obviously that’s an extreme example, but the point is, with SEO we can build a sustainable source of website traffic that converts into customers for years to come, and this makes is significantly different to any other advertising channel.</p>"
+            }
+        }
+        
+        
+     ]}
+
+
+  
+                  </script> 
+<!-- End of FAQ Schema json -ld --> <ul class="accordion-wrapper roundedIcon  " data-first-expanded="false"> <li class="accordion-item"> <div class="accordion-title"> <div class="title-text"> <h4>How do I get start with SEO for my website?</h4> 
+</div> 
+ <div class="arrow-wrapper"> <div class="arrow"> <svg class="close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1152 1792" style="background-color:inherit !important" fill="currentColor"> <path fill="inherit" d="M1075 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path> 
+</svg> 
+</div> 
+</div> 
+</div> 
+ <div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">It&rsquo;s super simple. Fill out this <a value="me-book-in-form" label="" type="page" href="me-book-in-form.html" data-runtime-url="/me-book-in-form">form</a> 
+and we'll assign you an Account Manager who will be in touch to get the ball rolling. You&rsquo;ll be linked through to an online briefing form that you can complete while you&rsquo;re waiting.</p><br/><p class="rteBlock">If you're not ready yet, we'd love to chat with you about SEO in more detail. <a value="contact" label="" type="page" href="contact.html" data-runtime-url="/contact">Call us</a> 
+for an obligation-free discovery session.</p></div> 
+</div> 
+</div> 
+</li> 
+ <li class="accordion-item"> <div class="accordion-title"> <div class="title-text"> <h4>Am I guaranteed results from SEO?</h4> 
+</div> 
+ <div class="arrow-wrapper"> <div class="arrow"> <svg class="close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1152 1792" style="background-color:inherit !important" fill="currentColor"> <path fill="inherit" d="M1075 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path> 
+</svg> 
+</div> 
+</div> 
+</div> 
+ <div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">Unfortunately, it doesn&rsquo;t work that way (we wish it did!). But, we offer a no lock-in contract or minimum term so you can walk away the moment you feel like you're not getting value.</p></div> 
+</div> 
+</div> 
+</li> 
+ <li class="accordion-item"> <div class="accordion-title"> <div class="title-text"> <h4>Why does SEO take time to generate results?</h4> 
+</div> 
+ <div class="arrow-wrapper"> <div class="arrow"> <svg class="close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1152 1792" style="background-color:inherit !important" fill="currentColor"> <path fill="inherit" d="M1075 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path> 
+</svg> 
+</div> 
+</div> 
+</div> 
+ <div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">SEO is a notoriously slow digital marketing method that takes time to see results &mdash; and those results aren't always guaranteed. This is mostly because it takes time for search engines to recrawl your website and recognise the work that we've done, as well as complex search algorithms that are always changing. Furthermore, the reporting tools are delayed in showing these results.&nbsp;</p><br/><p class="rteBlock">We can certainly show you progress, though! For example, increased position for target keywords and increased organic traffic. However, this may not translate into enquiries immediately. Until this happens, we have ongoing and transparent conversations about the progress and if the agreement is heading in the right direction.</p></div> 
+</div> 
+</div> 
+</li> 
+ <li class="accordion-item"> <div class="accordion-title"> <div class="title-text"> <h4>Why even bother with SEO?</h4> 
+</div> 
+ <div class="arrow-wrapper"> <div class="arrow"> <svg class="close" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 1152 1792" style="background-color:inherit !important" fill="currentColor"> <path fill="inherit" d="M1075 736q0 13-10 23l-466 466q-10 10-23 10t-23-10l-466-466q-10-10-10-23t10-23l50-50q10-10 23-10t23 10l393 393 393-393q10-10 23-10t23 10l50 50q10 10 10 23z"></path> 
+</svg> 
+</div> 
+</div> 
+</div> 
+ <div class="accordion-description"> <div class="section"> <div class="section-inner"><p class="rteBlock">So, if SEO is a risk and takes a lot of time and energy, why should you bother considering it? Like most things, the higher the risk, the higher the reward.</p><br/><p class="rteBlock">SEO is unique, as once you secure a high position for a high-traffic keyword, you are effectively getting free leads forever after. We see businesses achieve website traffic worth tens-of-thousands of dollars every month.&nbsp;</p><br/><p class="rteBlock">SEO Thought Leader, Neil Patel, even shows us how over decades, he&rsquo;s built a monthly traffic volume equivalent to him spending $5 million a month on advertising. Obviously that&rsquo;s an extreme example, but the point is, with SEO we can build a sustainable source of website traffic that converts into customers for years to come, and this makes is significantly different to any other advertising channel.</p></div> 
+</div> 
+</div> 
+</li> 
+</ul> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="u_sign-up dmRespRow dmSectionParallaxNew" style="text-align: center;" id="sign-up" data-anchor="sign-up"> <div class="dmRespColsWrapper" id="1489499539"> <div class="u_1014151127 dmRespCol small-12 medium-12 large-12" id="1014151127"> <div class="dmRespRow u_1561329125 fullBleedChanged fullBleedMode" id="1561329125"> <div class="dmRespColsWrapper" id="1410733685"> <div class="u_1556364346 dmRespCol small-12 large-7 medium-7" id="1556364346"> <div class="u_1671888771 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1671888771" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-38 size-48" style="line-height: 1.2;"><span class="m-font-size-38 font-size-48" style="font-weight: bold; display: initial;">Talk to us to find out more about our SEO services.</span><span style="color: rgb(255, 255, 255); display: initial;"><br/></span></p></div> 
+</div> 
+ <div class="u_1133396202 dmRespCol small-12 large-5 medium-5" id="1133396202"> <a data-display-type="block" class="u_1749386112 align-center dmButtonLink dmWidget dmWwr default dmOnlyButton dmDefaultGradient" file="false" href="contact.html" data-element-type="dButtonLinkId" id="1749386112" data-buttonstyle="ROUND_SIDES"> <span class="iconBg" id="1576950936"> <span class="icon hasFontIcon icon-star" id="1458791672"></span> 
+</span> 
+ <span class="text" id="1291079758">Let's talk</span> 
+</a> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div class="sticky-widgets-container-global" id="1248357514"></div> 
+ <div class="dmFooterContainer"> <div id="fcontainer" class="u_fcontainer f_hcontainer dmFooter p_hfcontainer"> <div dm:templateorder="250" class="dmFooterResp generalFooter" id="1943048428"> <div class="u_1741789201 dmRespRow fullBleedChanged fullBleedMode hide-for-medium" style="text-align: center;" id="1741789201"> <div class="dmRespColsWrapper" id="1436377863"> <div class="u_1842849185 dmRespCol small-12 large-2 medium-2" id="1842849185"> <div class="u_1612715864 imageWidget align-center" data-element-type="image" data-widget-type="image" id="1612715864"><img src="https://irp.cdn-website.com/fad78d66/dms3rep/multi/download.gif" alt="" id="1267997637" class="" data-dm-image-path="https://irp.cdn-website.com/fad78d66/dms3rep/multi/download.gif" width="432" height="432" onerror="handleImageLoadError(this)"/></div> 
+</div> 
+ <div class="u_1306027118 dmRespCol small-12 large-7 medium-7" id="1306027118"> <div class="dmNewParagraph u_1156228598" data-element-type="paragraph" data-version="5" id="1156228598" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-11 text-align-center size-14"><span class="m-font-size-11 font-size-14" style="font-weight: bold; display: unset;"><span class="m-font-size-11 font-size-14" style="font-weight: bold; display: unset;">A4/661 Newcastle St, Leederville WA&nbsp; &nbsp;&middot; &nbsp;</span> 
+</span><a href="https://www.google.com/search?q=helium+marketing&rlz=1C1CHBF_en-GBAU927AU927&oq=helium+marketing&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMhUIARAuGCcYrwEYxwEYgAQYigUYjgUyBggCEEUYOzIKCAMQLhixAxiABDITCAQQLhiDARjHARixAxjRAxiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDE3MTBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#" target="_blank" runtime_url="https://www.google.com/search?q=helium+marketing&rlz=1C1CHBF_en-GBAU927AU927&oq=helium+marketing&gs_lcrp=EgZjaHJvbWUqDwgAECMYJxjjAhiABBiKBTIPCAAQIxgnGOMCGIAEGIoFMhUIARAuGCcYrwEYxwEYgAQYigUYjgUyBggCEEUYOzIKCAMQLhixAxiABDITCAQQLhiDARjHARixAxjRAxiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDE3MTBqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#" class="m-font-size-11 font-size-14" style="font-weight: bold; display: unset;">1800 435 486</a><span class="m-font-size-11 font-size-14" style="font-weight: bold; display: unset;"> <span class="m-font-size-11 font-size-14" style="font-weight: bold; display: unset;">&nbsp;</span> 
+</span><span class="m-font-size-11 font-size-14" style="font-weight: 700; display: unset;">&nbsp;&middot; &nbsp;</span><span class="m-font-size-11 font-size-14" style="font-weight: bold; display: unset;"> <span class="m-font-size-11 font-size-14" style="font-weight: bold; display: unset;">hello@heliummarketing.agency</span></span></p></div> 
+</div> 
+ <div class="u_1089921865 dmRespCol small-12 large-3 medium-3" id="1089921865"> <div class="u_1729355653 dmNewParagraph" data-element-type="paragraph" data-version="5" id="1729355653" style="transition: none 0s ease 0s; text-align: left; display: block;"><p class="m-size-11 text-align-right size-14 m-text-align-center"><a href="terms-and-conditions.html" runtime_url="/terms-and-conditions" type="page" class="font-size-14 m-font-size-11" style="text-decoration: none; color: rgb(0, 0, 0); display: unset;">Terms and Conditions</a><span class="font-size-14 m-font-size-11" style="display: unset;"> <span class="font-size-14 m-font-size-11" style="display: unset;">|</span> 
+</span><a href="privacy-policy.html" runtime_url="/privacy-policy" type="page" class="font-size-14 m-font-size-11" style="display: unset; color: rgb(0, 0, 0); text-decoration: none;">Privacy Policy</a></p></div> 
+ <div data-element-type="spacer" class="u_1804690954 dmSpacer hide-for-small" id="1804690954"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+ <div id="1236746004" dmle_extension="powered_by" data-element-type="powered_by" icon="true" surround="false"></div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+</div> 
+
+    </div>
+</div>
+<!--  Add full CSS and Javascript before the close tag of the body if needed -->
+<!-- ========= JS Section ========= -->
+
+<script>
+    var isWLR = true;
+
+    window.customWidgetsFunctions = {};
+    window.customWidgetsStrings = {};
+    window.collections = {};
+    window.currentLanguage = "ENGLISH"
+    window.isSitePreview = false;
+</script>
+<script>
+    window.customWidgetsFunctions["7b2ba547771b4d4db17e3e2b9f0abd0c~225"] = function (element, data, api) {
+        var $element = $(element);
+var $tabs = $element.find('.tab');// not relevant for mobile
+var $tabLables = $element.find('.tab-label');
+
+if ($tabs.length > 0) { 
+    if (data.device==="mobile" && data.config.mobileLayoutToggle) {// on mobile and dropdown mode
+    	addMobileClickListener($element);
+    } 
+    else { // on desktop or accordion mobile layout
+       addDesktopClickListener($element);
+    }
+    addHoverHandler($tabLables);
+}
+
+function addMobileClickListener($element)  {
+    // tab label mobile click handler;
+    $element.off('click.tabs.mobile').on('click.tabs.mobile', '.tab-label', function() {
+    	    var $clicked_tab_item = $(this).closest('.tab-item');
+            var $siblings = $clicked_tab_item.siblings();
+            domChangeOnMobileClick($clicked_tab_item, $siblings);
+        });
+        
+}
+
+function addDesktopClickListener($element) {
+        $tabLables.off('click.tabs.desktop').on('click.tabs.desktop', function(event) {
+            var $curr = $(this);
+            // layout-e-aux-tab-label is an auxilary class represents the
+            // remaining space on layout 3's labels, it shouldn't be selectable
+            if ( $curr.hasClass('active') || $curr.hasClass('layout-e-aux-tab-label')){ 
+                return;
+            }
+            domChangeOnDesktopClick($curr);
+        });
+        
+        
+}
+
+
+function addHoverHandler($tabLables) {
+  //background hover issue hack - pseusu class support in widget builder is limited
+    $tabLables.off('mouseover.tabs').on('mouseenter.tabs', function(event) {
+        var $this = $(this);
+        // aux label on layout e should'nt be selected
+        if ($this.hasClass('layout-e-aux-tab-label')) return;
+        $this.addClass('hover');
+        $this.removeClass('not-active');
+    });
+    $tabLables.off('mouseout.tabs').on('mouseleave.tabs', function(event){
+        var $this = $(this);
+        // aux label on layout e should'nt be selected
+        if ($this.hasClass('layout-e-aux-tab-label')) return;
+        if (! $this.hasClass('active') ) {
+            $this.removeClass('hover');
+            $this.addClass('not-active');
+        }
+    });
+}
+
+function domChangeOnMobileClick($clicked_tab_item, $siblings) {
+    $siblings.removeClass('expanded');
+    $siblings.find('.tab-label').removeClass('active').addClass('not-active');
+    $clicked_tab_item.toggleClass('expanded');
+    $clicked_tab_item.find('.tab-label').toggleClass('active');
+}
+
+function domChangeOnDesktopClick($curr) {
+    $curr.addClass('active').removeClass('not-active').removeClass('hover');
+    $siblings = $curr.siblings();
+    $siblings.removeClass('active').addClass('not-active').removeClass('hover');
+    //If no argument is passed to the .index() method, the return value is an integer indicating the position of the 
+    //first element within the jQuery object relative to its sibling elements.
+    var index = $curr.index();
+    $tabs.removeClass('active');
+    $tabs.eq(index).addClass('active');
+}
+    };
+</script>
+<script>
+    window.customWidgetsFunctions["832a29738c2b44fdb4e63369b1bf458a~78"] = function (element, data, api) {
+        
+
+$(element).find('[data-first-expanded="true"]').attr('data-first-expanded', 'false').find('.accordion-item').eq(0).addClass('expanded');
+
+$(element).off('click.toggle').on('click.toggle', '.accordion-title', function(){
+    if(data.config.collapseOthers){
+        $(this).parents('.accordion-item').siblings().removeClass('expanded');
+        // $(element).find('.accordion-item').not(this).removeClass('expanded');
+    }
+    $(this).parents('.accordion-item').toggleClass('expanded');
+});
+
+
+    };
+</script>
+<script>
+    window.customWidgetsFunctions["7ebf92fcfe734a44a1911cd164200ec0~360"] = function (element, data, api) {
+        /* * Mega Menu
+
+* Aug 2020 
+* Version 1.0.2
+
+*Upon purchase of this widget, you acquire the right to use it; you're not actually 
+acquiring the widget itself.TheCamel.co is the owner of the intellectual property of this widget.
+The widget is for use only, it is not to be on sold, lent, rented, given away, gifted you can’t 
+even put it in your will. It is for use for your sites only on the dashboard we install the item in.
+
+*Kindly refer to our Terms and Conditions for more info - http://www.thecamel.co/terms-and-conditions
+*/
+
+const site_name = data.siteId;
+const preview_current_page = data.page;
+const live_current_page = window.location.pathname;
+const widgetId = data.id;
+
+let showHome = data.config.showHome;
+let ComponentAppend = new ComponentStructure();
+let navPos = data.config.navPos;
+let useDivider = data.config.useDivider;
+let divideStyle = data.config.dividerStyle;
+
+let device = data.device;
+let showSubNavTitle = data.config.showSubNavTitle;
+let navHover = data.config.navHover;
+let isSticky = data.config.isSticky;
+let showComArrow = data.config.showComArrow;
+
+let isMultiLang = window.Parameters.IsSiteMultilingual;
+let current_lang = isMultiLang ? window.Parameters.translatedPageUrl:"";// ex: /fr-ca || /en || ""
+let is_main_lang = isMultiLang && window.Parameters.translatedPageUrl == "";
+let is_home = window.Parameters.InitialPageAlias == "home" || window.Parameters.InitialPageAlias == current_lang.split("/")[1];
+
+let current_language = window.Parameters.translatedPageUrl == "" ? "" : `${window.Parameters.translatedPageUrl.split("/")[1]}`;
+
+let markup = getMenu_[site_name](); //getMenu_[site_name](); // defaultNav
+
+createMegaMenu(markup);
+
+isSticky == true ? $(element).attr('data-element-type', 'onelinksmenu') : '';
+
+// treat the widget's row as a navigation row
+(isSticky) ? $(element).parents('.dmRespRow').toggleClass('mini-header-hide-row mini-header-show-row') : $(element).parents('.dmRespRow').removeClass('mini-header-show-row');
+
+function createMegaMenu(arrObj) { // DO NOT COPY FROM dashboard.js
+  if (!arrObj) {
+    $(element).find('.meganav-container').html(`<li class="nomarkup">Mega Menu Widget has been removed from the App Store.</li>`);
+    return
+  }
+  if (arrObj == "Click here to setup Mega Menu Widget" || arrObj == "Setup Mega Menu Widget") {
+    $(element).find('.meganav-container').html(`<div class="mega-menu-setup">${arrObj}</div>`);
+    return
+  }
+  let menuObj = typeof arrObj == "string" ? JSON.parse(arrObj) : arrObj;
+
+  $(element).find('.meganav-container').html("");
+  
+  let navCreated = menuObj.map((obj, index) => {
+    let new_path;
+
+    let locale_url = obj['url'+current_language] || obj['url'+current_language] == "" ? obj['url'+current_language] : obj.url;
+
+    let itemLink = window.location.href.includes(data.siteId) && locale_url !== "" ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+    // https://webbuilder.localsearch.com.au/site/9c6609d8/residential?preview=true&insitepreview=true&dm_device=desktop
+    
+    let pathName = isActive(locale_url);
+    console.log(pathName);
+    
+    let title_lang = obj['title'+current_language] ? obj['title'+current_language]:obj.title;
+    if (locale_url.includes("http") || locale_url == "") {
+      itemlink = locale_url;
+    } 
+    let isNoComponent = obj.components.length;
+    
+    
+    let navMenuStructure = `
+            ${useDivider && !showHome ? dividerStyle(divideStyle) : useDivider && showHome ? dividerStyle(divideStyle) : ''}
+            <li class="meganav-container__navlink-container ${isNoComponent == 0 ? 'noComponent' : 'hasComponent'} ${showComArrow ? "arrowShow" : ""}" data-menu="${index}">
+            ${locale_url !== "" ? `<a href="http://www.heliummarketing.agency/${itemLink}" class="meganav-container__navlink ${navHover} ${pathName ? 'activeNav' : ''}" target="${obj.newTab ? '_blank' : ''}">${title_lang}</a>` : `<span class="meganav-container__navlink ${pathName ? 'activeNav' : ''} ${navHover}">${title_lang} ${isNoComponent == 0 ? '' : '<span class="subIcon"><i class="fa-solid fa-chevron-down"></i></span>'}</span>`}
+                <div class="meganav-container__navlink-component-wrapper">
+                    <div class="meganav-container__navlink-component-container ${obj.orientation == 'Horizontal' ? obj.orientation : 'Vertical'} ${isNoComponent == 0 ? 'hidden' : ''}">
+                        ${ComponentAppend.structure(obj)}
+                    </div>
+                </div>
+            </li>`;
+            
+    $(element).find('.meganav-container').append(navMenuStructure);
+    
+    if (showHome) {
+      $(element).find('.meganav__divider:first-child').show();
+    } else {
+      $(element).find('.meganav__divider:first-child').hide();
+    }
+  });
+
+}
+
+function ComponentStructure() {
+    this.structure = function (data) {
+        return data.components.map((arr, compIndex) => {
+            let objKey = Object.keys(arr);
+            return this[objKey] === undefined ? this.empty_component() : this[objKey](arr[objKey], compIndex);
+        }).join("");
+    };
+    this.empty_component = function () {
+        return '';
+    };
+    this.componentTemplate = function (index, compIndex) {
+        let component = `
+        <div class="widget-builder__nav-components-wrapper widget-builder_links-list-card-theme" data-index="${index}">
+            <div class="widget-builder_nav-component-label widget-builder_links-list-title-theme">
+                <div class="widget-builder__accordion-btn" data-index="${index}" data-accordion="menu"></div>
+                <div class="widget-builder__accordion-icon-wrapper">
+                    <i class="fas fa-caret-right widget-builder__accordion-icon active"></i>
+                </div>
+                <div class="widget-builder__component-picker-wrapper">
+                    <select name="componentpicker" class="componentpicker widget-builder_input-title-field-theme" data-index="${index}" data-compindex="${compIndex}">
+                        <option value="free_text">Free Text</option>
+                        <option value="click_to_call">Click to Call</option>
+                        <option value="social_media">Social Media</option>
+                        <option value="contact_info">Contact Information</option>
+                        <option value="custom_button">Custom Buttons</option>
+                        <optgroup label="Multiple Sub Navigations">
+                            <option value="multi_sub_nav">Sub Navigation</option>
+                            <option value="ext_nav">Extended Sub Navigation</option>
+                            <option value="grid">Grid Columns</option>
+                        </optgroup>
+                        <optgroup label="Visual Media">
+                            <option value="thumbnail">Thumbnail</option>
+                            <option value="video">Video</option>
+                            <option value="stacked_images">Image Gallery</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="widget-builder__component-input-label">Component</div>
+                <div class="widget-builder_delete-navlink-btn-wrapper" title="Delete" data-accordion="comp">
+                    <i class="widget-builder_delete-navlink-btn fa fa-trash-alt" data-index="${index}" data-compindex="${compIndex}"></i>
+                </div>
+            </div>
+        </div>`;
+
+        return component;
+    };
+    this.free_text = function (text) {
+        let free_text = text['free_text' + current_language] ? text['free_text' + current_language] : text.free_text;
+        let textStructure = `
+            <div class="meganav-container__text meganav_container__component-spacing">
+                ${free_text}
+            </div>`;
+        return textStructure;
+    };
+    this.thumbnail = function (thumbnail) {
+        let locale_url = thumbnail['url'+current_language] ? thumbnail['url'+current_language] : `${thumbnail.url=="/home" ? "": `/${current_language}${thumbnail.url.replace(/_/g, "-")}`}`;
+        let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+        let link = `href="${itemLink || itemLink == "" ? itemLink : thumbnail.url}"`;
+        if (locale_url.includes("http") || thumbnail['url'+current_language] == "") {
+          link = `href="${thumbnail['url'+current_language] ? thumbnail['url'+current_language] : thumbnail.url}"`;
+        } 
+        let img_src = thumbnail['img_src' + current_language] ? thumbnail['img_src' + current_language] : thumbnail.img_src;
+        let alt = thumbnail['alt' + current_language] ? thumbnail['alt' + current_language] : thumbnail.alt;
+        let newTab = thumbnail['newTab' + current_language] ? thumbnail['newTab' + current_language] : thumbnail.newTab;
+        let thumbnailStructure = `
+            <div class="meganav-container__thumbnail-image meganav_container__component-spacing">
+                <a ${link !== 'href=""' ? link :""} class="meganav-container__thumbnail-image-wrapper" ${newTab == true ? 'target="_blank"' : ''}>             
+                    <img src="http://www.heliummarketing.agency/${img_src&#32;?&#32;img_src&#32;:""}" alt="${alt ? alt :""}">
+                </a>
+            </div>`;
+        return thumbnailStructure;
+    };
+    this.grid = function (items) {
+        let title_lang = items['title' + current_language] ? items['title' + current_language] : items.title;
+        let columnSize = items.columnSize;
+        let defaultWidth = items.defaultWidth;
+        let itemsList = items.grid_nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let icon = i['icon' + current_language] ? i['icon' + current_language] : i.icon;
+            return `
+                <a ${link !== 'href=""' ? link : ''} class="meganav-container__grid-sub-nav-wrapper horizontal" target="${i.newTab ? '_blank' : ''}">
+                    <div class="meganav-container__grid-sub-nav-icon">
+                        ${i.hideIcon ? '':`<img src="http://www.heliummarketing.agency/${icon&#32;?&#32;icon&#32;:""}" alt="">`}
+                        <div class="meganav-container__grid-sub-nav-link-title">${title ? title : ""}</div>
+                    </div>
+                    ${short_desc ? `<div class="meganav-container__grid-sub-nav-description">${short_desc}</div>` : ''}
+                </a>`;
+        }).join('');
+
+        let itemsNavStructure = `
+        <div class="meganav-container__grid-sub-nav-container meganav_container__component-spacing">
+            <div class="meganav-container__grid-sub-nav-title ${title_lang ? "" : "noTitle"}">${title_lang ? title_lang : 'Title'}</div>
+            <div class="meganav-container__grid-sub-nav-items ${items.topIcon ? 'meganav-container-grid-top-icons':''}" data-size="${columnSize}" style="width:${`${defaultWidth ? defaultWidth : 0}px`}">
+                ${itemsList}
+            </div>
+        </div>`;
+        return itemsNavStructure;
+    };
+    this.stacked_images = function (images) {
+        let title_lang = images['title' + current_language] ? images['title' + current_language] : images.title;
+        let defaultWidth = images.defaultWidth;
+
+        let imagesList = images.stack_nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let img_src = `${i['img_src' + current_language] ? i['img_src' + current_language] : i.img_src}"`;
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let imageNavListStructure = `
+                <a ${link !== 'href=""' ? link : ''} class="meganav-container__stack-sub-nav-wrapper horizontal ${i.topImage ? "meganav-container__stack-sub-nav-wrapper-topimage":""}" target="${i.newTab ? '_blank' : ''}">
+                    ${!i.hideIcon ? `<div class="meganav-container__stack-sub-nav-image">${img_src ? `<img src="http://www.heliummarketing.agency/${img_src}" alt="${title}">` : ''}</div>` : ""}
+                    <div class="meganav-container__services-content meganav-container__stack-sub-nav-content">
+                        <div class="meganav-container__stack-sub-nav-link-title">${title ? title : ''}</div>
+                        ${short_desc ? `<div class="meganav-container__stack-sub-nav-description">${short_desc}</div>` : ''}
+                    </div>
+                </a>`;
+            return imageNavListStructure;
+        }).join('');
+        let imageNavStructure = `
+        <div class="meganav-container__stack-sub-nav-container meganav_container__component-spacing" style="width:${`${defaultWidth}px`}">
+            <div class="meganav-container__stack-sub-nav-title ${title_lang ? "" : "noTitle"}">${title_lang ? title_lang: 'Title'}</div>
+            ${imagesList}
+        </div>`;
+        return imageNavStructure;
+    };
+    this.multi_sub_nav = function (subNav) {
+        let title_lang = subNav['title' + current_language] ? subNav['title' + current_language] : subNav.title;
+        let subnavList = subNav.nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let icon = i['icon' + current_language] ? i['icon' + current_language] : i.icon;
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let navListStructure = `
+                <a ${link !== 'href=""' ? link : ''} class="meganav-container__multi-sub-nav-wrapper horizontal" target="${i.newTab ? '_blank' : ''}">
+                    ${!i.hideIcon ? `<div class="meganav-container__multi-sub-nav-icon">${icon.includes("http") ? `<img src="http://www.heliummarketing.agency/${icon}" alt="">` : icon}</div>` : ""}
+                    <div class="meganav-container__services-content meganav-container__multi-sub-nav-content">
+                        <div class="meganav-container__multi-sub-nav-link-title">${title ? title : ''}</div>
+                        ${short_desc? `<div class="meganav-container__multi-sub-nav-description">${short_desc}</div>` : ''}
+                    </div>
+                    <div class="meganav-container__inner-sub-nav-content"  style='display:${i.inner_nav ? "block":"none"}'>
+                        ${i.inner_nav ? createInnerNav(i.inner_nav) : ''}
+                    </div>
+                </a>`;
+            return navListStructure;
+        }).join('');
+
+        function createInnerNav(innerNav) {
+            return '';
+            // TODO
+            // return innerNav.map(i => {
+            //     return `<a href="http://www.heliummarketing.agency/${i.link}">${i.title}</a>`;
+            // }).join('');
+        }
+        let subNavStructure = `
+        <div class="meganav-container__multi-sub-nav-container meganav_container__component-spacing">
+            <div class="meganav-container__multi-sub-nav-title ${title_lang ? "" : "noTitle"}">${title_lang ? title_lang : 'Title'}</div>
+            ${subnavList}
+        </div>`;
+        return subNavStructure;
+    };
+    this.ext_nav = function (extNav) {
+        let title_lang = extNav['title' + current_language] ? extNav['title' + current_language] : extNav.title;
+        let img_src = extNav['img_src' + current_language] ? extNav['img_src' + current_language] : extNav.img_src;
+        let alt = extNav['alt' + current_language] ? extNav['alt' + current_language] : extNav.alt;
+        let order = extNav.order;
+        let extNavList = extNav.ext_nav_list.map((i) => {
+            let title = i['title' + current_language] ? i['title' + current_language] : i.title;
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink || itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let icon = i['icon' + current_language] ? i['icon' + current_language] : i.icon;
+            let img_src = i['img_src' + current_language] ? i['img_src' + current_language] : i.img_src;
+            let short_desc = i['short_desc' + current_language] ? i['short_desc' + current_language] : i.short_desc;
+            let navListStructure = `            
+            <a ${link !== 'href=""' ?link : ''} class="meganav-container__ext-nav-wrapper horizontal" data-img="${img_src ?img_src : extNav.img_src}" target="${i.newTab ? '_blank' : ''}">
+                ${!i.hideIcon ? `<div class="meganav-container__ext-nav-icon">${icon.includes("http") ? `<img src="http://www.heliummarketing.agency/${icon}" alt="">` : icon}</div>` : ""}
+                <div class="meganav-container__services-content meganav-container__ext-nav-content">
+                    <div class="meganav-container__ext-nav-link-title">${title ? title :""}</div>
+                    ${short_desc ? `<div class="meganav-container__ext-nav-description">${short_desc}</div>` : ''}
+                </div>
+            </a>`;
+            return navListStructure;
+        }).join('');
+        let extNavStructure = `
+        <div class="meganav-container__ext-nav-main-container meganav_container__component-spacing ${order}">
+            <div class="meganav-container__ext-nav-image meganav_container__ext-nav-inner-spacing">
+                <img src="http://www.heliummarketing.agency/${img_src}" alt="${alt}">
+            </div>
+            <div class="meganav-container__ext-nav-container meganav_container__ext-nav-inner-spacing">
+                <div class="meganav-container__ext-nav-title">${title_lang ? title_lang :""}</div>
+                ${extNavList}
+            </div>
+        </div>`;
+        return extNavStructure;
+    };
+    this.social_media = function (social) {
+        let title_lang = social['title' + current_language] ? social['title' + current_language] : social.title;
+        let orientation = social['orientation' + current_language] ? social['orientation' + current_language] : social.orientation;
+        let socialList = social.social_lists.map((i) => {
+            let locale_url = i['url'+current_language] ? i['url'+current_language] : `${i.url=="/home" ? "": `/${current_language}${i.url.replace(/_/g, "-")}`}`;
+            let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+            let link = `href="${itemLink|| itemLink == "" ? itemLink : i.url}"`;
+            if (locale_url.includes("http") || i['url'+current_language] == "") {
+              link = `href="${i['url'+current_language] ? i['url'+current_language] : i.url}"`;
+            } 
+            let social_type = `${i['social_type' + current_language] ? i['social_type' + current_language] : i.social_type}`;
+            let socialListStructure = `
+                    <a ${link!== "" ? link:""} class="meganav-container__contact-social-list" target="${i.newTab ? '_blank' : ''}">
+                        ${socialIcon(social_type)}
+                    </a>`;
+            return socialListStructure;
+        }).join('');
+        let socialStructure = `
+            <div class="meganav-container__contact-social-media meganav_container__component-spacing ${orientation == "Horizontal" ?orientation : "Vertical"}">
+                <div class="meganav-container__contact-social-title">
+                    ${title_lang ? title_lang : ''}
+                </div>
+                <div class="meganav-container__contact-social-list">
+                    ${socialList}
+                </div>
+            </div>`;
+        return socialStructure;
+    };
+    this.contact_info = function (contactInfo) {
+        let title_lang = contactInfo['title' + current_language] ? contactInfo['title' + current_language] : contactInfo.title;
+        let phone = contactInfo['phone' + current_language] ? contactInfo['phone' + current_language] : contactInfo.phone;
+        let address = contactInfo['address' + current_language] ? contactInfo['address' + current_language] : contactInfo.address;
+        let email = contactInfo['email' + current_language] ? contactInfo['email' + current_language] : contactInfo.email;
+        let contactInfoStructure = `
+            <div class="meganav-container__contact-info-wrapper meganav_container__component-spacing">
+                    <div class="meganav-container__contact-title">
+                       ${title_lang ? title_lang : ''}
+                    </div>
+                    ${address ? `<a href="https://www.google.com/maps?q=${address.split(' ').join('+')}" class="meganav-container__contact-location" target="_blank">
+                        <i class="fas fa-map-marker-alt"></i>
+                        ${address}</a>` : ''}
+                     ${phone ? `<a href="tel:${phone}" class="meganav-container__contact-phone">
+                        <i class="fas fa-phone-alt"></i>${phone}</a>`: ''}
+                    ${email ?`<a href="mailto:${email}" class="meganav-container__contact-email">
+                        <i class="far fa-envelope"></i>${email}</a>`: ''}
+                </div>`;
+        return contactInfoStructure;
+    };
+    this.custom_button = function (customBtn) {
+        let title_lang = customBtn['label' + current_language] ? customBtn['label' + current_language] : customBtn.label;
+        let locale_url = customBtn['url'+current_language] ? customBtn['url'+current_language] : `${customBtn.url=="/home" ? "": `/${current_language}${customBtn.url.replace(/_/g, "-")}`}`;
+        let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+        let link = `href="${itemLink || itemLink == ""? itemLink : customBtn.url}"`;
+        if (locale_url.includes("http") || customBtn['url'+current_language] == "") {
+          link = `href="${customBtn['url'+current_language] ? customBtn['url'+current_language] : customBtn.url}"`;
+        } 
+        let buttonStructure = `
+        <a ${link !== 'href=""' ? link : ""} class="meganav-container__contact-btn meganav_container__component-spacing" target="${customBtn.newTab ? '_blank' : ''}">
+            ${title_lang ? title_lang : ''}
+        </a>`;
+        return buttonStructure;
+    };
+    this.video = function (video) {
+        let video_src = video['vid_src' + current_language] ? video['vid_src' + current_language] : video.vid_src;
+        let img_src = video['img_src' + current_language] ? video['img_src' + current_language] : video.img_src;
+        let popup = video.popup;
+        let vidSrc = video_src.substr(video_src.indexOf("v=") + 2);
+        let videoStructure = `<div class="meganav-container__video-container meganav_container__component-spacing">
+                                <div class="meganav-container__video-wrapper ${popup ? 'videoPopup' : ''}" target="_blank">
+                                    <img src="http://www.heliummarketing.agency/${img_src&#32;?&#32;img_src&#32;:""}" class="meganav-container__video-thumbnail">
+                                    <iframe src="https://www.youtube.com/embed/${vidSrc}?rel=0&amp;showinfo=0" frameborder="0"
+                                        allow="autoplay; encrypted-media" allowfullscreen class="meganav-container__video"></iframe>
+                                </div>
+                            </div>`;
+        return videoStructure;
+    };
+    this.click_to_call = function (ctc) {
+        let title_lang = ctc['title' + current_language] ? ctc['title' + current_language] : ctc.title;
+        let desc = ctc['description' + current_language] ? ctc['description' + current_language] : ctc.description;
+        let label = ctc['btn_label' + current_language] ? ctc['btn_label' + current_language] : ctc.btn_label;
+        let locale_url = ctc['btn_url'+current_language] ? ctc['btn_url'+current_language] : `${ctc.btn_url=="/home" ? "": `/${current_language}${ctc.btn_url.replace(/_/g, "-")}`}`;
+        let itemLink = window.location.href.includes(data.siteId) ? `/site/${data.siteId}${locale_url}?preview=true&insitepreview=true&showOriginal=true&dm_checkSync=1&dm_try_mode=true&inPrev=true&dm_device=${device}` : `${locale_url}`;
+        let link = `href="${itemLink ? itemLink : ctc.btn_url}"`;
+        if (locale_url.includes("http") || ctc['url'+current_language] == "") {
+          link = `href="${ctc['btn_url'+current_language] ? ctc['btn_url'+current_language] : ctc.btn_url}"`;
+        } 
+        let ctcStructure = `
+            <div class="meganav-container__ctc-container meganav_container__component-spacing">
+                ${title_lang ? `<span class="meganav-container__ctc-title meganav-container__ctc-wrapper">${title_lang}</span>` : ''}
+                ${desc ? `<span class="meganav-container__ctc-description meganav-container__ctc-wrapper">${desc}</span>` : ''}
+                ${label ? `<a ${link !== "" ? link :""} class="meganav-container__ctc-btn meganav-container__ctc-wrapper">${label}</a>` : ''}
+            </div>`;
+        return ctcStructure;
+    };
+}
+
+// ? Hover Behavior - Front End JS
+$('.widget-layout-result').on('mouseenter', '.meganav-container__navlink-container', function () {
+
+  $('.meganav-container__navlink-component-container').stop().hide();
+  let elem = $(this).find(".meganav-container__navlink-component-container");
+  elem.fadeIn(0, function () {
+    if (elem.hasClass('Horizontal')) {
+    //   elem.css('display', 'flex');
+      elem.css('display', 'grid');
+    }
+  });
+
+  let rect = this.getBoundingClientRect();
+  let windowWidth = $(window).outerWidth();
+  let excess = (rect.left + (elem.outerWidth() / 2)) - windowWidth;
+  let isOverFlow = (rect.left + (elem.outerWidth() / 2)) > windowWidth;
+  let left = !isOverFlow ? `-${(elem.outerWidth() / 2)}px` : `-${(elem.outerWidth() / 2) + (excess * 2)}px`;
+
+
+  elem.css("margin-left", left);
+  $(this).find(".meganav-container__navlink-component-container.Vertical").css({
+    "left": `${left}`,
+    "margin-left": "50%"
+  });
+
+  let isShort = $(this).find(".meganav-container__navlink-component-container").offset().left < 0;
+  if (isShort) {
+    left = "-" + rect.left + "px";
+    elem.css("margin-left", left);
+    $(this).find(".meganav-container__navlink-component-container.Vertical").css({
+      "left": `${left}`,
+      "margin-left": "50%"
+    });
+  }
+
+}).on('mouseleave', '.meganav-container__navlink-container', function () {
+  $('.meganav-container__navlink-component-container').stop().hide();
+});
+
+$('.widget-layout-result .meganav-container__navlink-container').on('mouseleave', function () {
+  $(this).find('.meganav-container__navlink-component-wrapper').css({ 'pointer-events': 'none' });
+  $(this).find('span.subIcon').removeClass('rotateIcon');
+//   $(this).find('span.subIcon').html('<i class="fa-solid fa-chevron-down"></i>');
+});
+
+$('.widget-layout-result .meganav-container__navlink-container').on('mouseenter', function () {
+  $(this).find('.meganav-container__navlink-component-wrapper').css({ 'pointer-events': 'auto' });
+  $(this).find('span.subIcon').addClass('rotateIcon');
+//   $(this).find('span.subIcon').html('<i class="fa-solid fa-chevron-up"></i>');
+});
+
+// Extended Sub Navigation Hover
+$(element).find(".widget-layout-result").on("mouseenter", ".meganav-container__ext-nav-wrapper", function () {
+  let elem = $(this);
+  let imgElem = $(this).parent().parent().find(".meganav-container__ext-nav-image img");
+  let storeDefaultImg = $(this).parent().parent().find(".meganav-container__ext-nav-image img").attr("src");
+  imgElem.attr("data-default", storeDefaultImg);
+  let newImageSrc = elem.attr("data-img");
+  imgElem.attr("src", newImageSrc && newImageSrc !== "" ? newImageSrc : storeDefaultImg);
+}).on("mouseleave", ".meganav-container__ext-nav-wrapper", function () {
+  let imgElem = $(this).parent().parent().find(".meganav-container__ext-nav-image img");
+  let defaultImg = $(this).parent().parent().find(".meganav-container__ext-nav-image img").attr("data-default");
+  imgElem.attr("src", defaultImg);
+});
+
+// ? Open Video Popup
+$(element).find('.widget-layout-result').on('click', '.meganav-container__video-wrapper.videoPopup', function () {
+  let videourl = $(this).find("iframe").attr("src");
+//   let video = videourl.substr(videourl.indexOf('?v=') + 3)
+  let video = videourl.match(/(?:https?:\/\/)?(?:www\.)?(?:youtube\.com\/(?:[^\/\n\s]+\/\S+\/|(?:v|e(?:mbed)?)\/|\S*?[?&]v=)|youtu\.be\/)([a-zA-Z0-9_-]{11})/i);
+  let popupStructure = `
+    <div class="meganav-container__video-popup-container">
+        <div class="meganav-container__video-popup-wrapper">
+            <div class="meganav-container__video-popup-close-btn"><i class="far fa-times-circle"></i></div>
+            <iframe src="https://www.youtube.com/embed/${video[1]}?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen class="meganav-container__video-popup"></iframe>
+        </div>
+    </div>`;
+  $(element).find('.widget-layout-result').append(popupStructure);
+  $('html').css({ 'overflow': 'hidden' });
+});
+
+// ? Close Video Popup
+$(element).find('.widget-layout-result').on('click', '.meganav-container__video-popup-close-btn', function () {
+  $(element).find('.meganav-container__video-popup-container').remove();
+  $('html').css({ 'overflow': 'auto' });
+});
+
+function socialIcon(socialType) {
+  if (socialType === 'Instagram') {
+    return '<i class="fab fa-instagram"></i>';
+  }
+  if (socialType === 'Facebook') {
+    return '<i class="fab fa-facebook-square"></i>';
+  }
+  if (socialType === 'Twitter') {
+    return '<i class="fab fa-twitter-square"></i>';
+  }
+  if (socialType === 'Youtube') {
+    return '<i class="fab fa-youtube"></i>';
+  }
+  if (socialType === 'Pinterest') {
+    return '<i class="fab fa-pinterest"></i>';
+  }
+  if (socialType === 'Vimeo') {
+    return '<i class="fab fa-vimeo-v"></i>';
+  }
+  if (socialType === 'Linkedin') {
+    return '<i class="fab fa-linkedin-in"></i>';
+  }
+  if (socialType === 'Reddit') {
+    return '<i class="fab fa-reddit-square"></i>';
+  }
+  if (socialType === 'Snapchat') {
+    return '<i class="fab fa-snapchat-ghost"></i>';
+  }
+  if (socialType === 'Tripadvisor') {
+    return '<i class="fab fa-tripadvisor"></i>';
+  }
+}
+
+function isActive(url) { //     /tr/reviews
+    if(url == "") return false;
+    
+    console.log(url);
+    let urlArray = url.split('/');
+    let sitePathName = window.location.pathname.replace(`/site/${data.siteId}`, '').split('/'); // /home ---> ["/home"]
+    // let path = sitePathName[1] ? sitePathName[1] : "home"; // home /nl
+    // let url_link = url.split('/')[1] ? url.split('/')[1] : "home"; // home
+    
+    let path = sitePathName[sitePathName.length - 1] !== "" ? sitePathName[sitePathName.length - 1] : "home"; // home /nl
+    let url_link = urlArray[urlArray.length - 1] !== "" ? urlArray[urlArray.length - 1] : "home"; // home
+    
+    if(!is_main_lang && isMultiLang && !is_home){
+        path = sitePathName[2] ? sitePathName[2] : current_language; // tr
+        url_link = url.split('/')[2] ? url.split('/')[2] : current_language; // tr
+    
+        path = sitePathName[sitePathName.length - 1] ? sitePathName[sitePathName.length - 1] : current_language; // home /nl
+        url_link = urlArray[urlArray.length - 1] ? urlArray[urlArray.length - 1] : current_language; // home
+    }
+
+    if(!is_main_lang && sitePathName.length !== 2 && url === "/"+current_language) return false;
+    
+    return path == url_link // /tr/about-us, /tr/services, /tr/services/investments
+}
+
+function dividerStyle(style) {
+  if (style == "slash") {
+    return `<li class="meganav__divider">/</li>`;
+  }
+  if (style == "pipe") {
+    return `<li class="meganav__divider">|</li>`;
+  }
+  if (style == "colon") {
+    return `<li class="meganav__divider">:</li>`;
+  }
+  if (style == "middot") {
+    return `<li class="meganav__divider">·</li>`;
+  }
+  if (style == "space") {
+    return `<li class="meganav__divider"> </li>`;
+  }
+}
+
+function doAjax(settings) {
+  return new Promise((res, rej) => $.ajax(settings).done(a => res(a)))
+}
+
+const cssId = 'fontAwesomeSource';
+if (!document.getElementById(cssId)) {
+  var head = document.getElementsByTagName('head')[0];
+  var link = document.createElement('link');
+  link.id = 'fontAwesomeSource';
+  link.rel = 'stylesheet';
+  link.type = 'text/css';
+  link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css';
+//   link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css';
+//   link.integrity = 'sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==';
+//   link.crossOrigin = 'anonymous';
+  head.appendChild(link);
+}
+
+    };
+</script>
+<script type="text/javascript">
+
+    var d_version = "production_4460";
+    var build = "2024-05-30T12_50_18";
+    window['v' + 'ersion'] = d_version;
+
+    function buildEditorParent() {
+        window.isMultiScreen = true;
+        window.editorParent = {};
+        window.previewParent = {};
+        window.assetsCacheQueryParam = "?version=2024-05-30T12_50_18";
+        try {
+            var _p = window.parent;
+            if (_p && _p.document && _p.$ && _p.$.dmfw) {
+                window.editorParent = _p;
+            } else if (_p.isSitePreview) {
+                window.previewParent = _p;
+            }
+        } catch (e) {
+
+        }
+    }
+
+    buildEditorParent();
+</script>
+
+<!-- Load jQuery -->
+<script type="text/javascript" id='d-js-jquery'
+        src="https://static.cdn-website.com/libs/jquery/jquery-3.7.0.min.js"></script>
+<!-- End Load jQuery -->
+<!-- Injecting site-wide before scripts -->
+<!-- End Injecting site-wide to the head -->
+
+
+<script>
+    var _jquery = window.$;
+
+    var jqueryAliases = ['$', 'jquery', 'jQuery'];
+
+    jqueryAliases.forEach((alias) => {
+        Object.defineProperty(window, alias, {
+            get() {
+                return _jquery;
+            },
+            set() {
+                console.warn("Trying to over-write the global jquery object!");
+            }
+        });
+    });
+    window.jQuery.migrateMute = true;
+</script>
+<script>
+    window.cookiesNotificationMarkupPreview = 'null';
+</script>
+
+<!-- HEAD RT JS Include -->
+<script id='d-js-params'>
+    window.INSITE = window.INSITE || {};
+    window.INSITE.device = "desktop";
+
+    window.rtCommonProps = {};
+    rtCommonProps["rt.ajax.ajaxScriptsFix"] =true;
+    rtCommonProps["rt.pushnotifs.sslframe.encoded"] = 'aHR0cHM6Ly97c3ViZG9tYWlufS5wdXNoLW5vdGlmcy5jb20=';
+    rtCommonProps["runtimecollector.url"] = 'https://rtc.multiscreensite.com';
+    rtCommonProps["performance.tabletPreview.removeScroll"] = 'false';
+    rtCommonProps["inlineEditGrid.snap"] =true;
+    rtCommonProps["popup.insite.cookie.ttl"] = '0.5';
+    rtCommonProps["rt.pushnotifs.force.button"] =true;
+    rtCommonProps["common.mapbox.token"] = 'pk.eyJ1IjoiZGFubnliMTIzIiwiYSI6ImNqMGljZ256dzAwMDAycXBkdWxwbDgzeXYifQ.Ck5P-0NKPVKAZ6SH98gxxw';
+    rtCommonProps["common.mapbox.js.override"] =false;
+    rtCommonProps["common.here.appId"] = 'iYvDjIQ2quyEu0rg0hLo';
+    rtCommonProps["common.here.appCode"] = '1hcIxLJcbybmtBYTD9Z1UA';
+    rtCommonProps["isCoverage.test"] =false;
+    rtCommonProps["ecommerce.ecwid.script"] = 'https://app.multiscreenstore.com/script.js';
+    rtCommonProps["feature.flag.mappy.kml"] =false;
+    rtCommonProps["common.resources.dist.cdn"] =true;
+    rtCommonProps["common.build.dist.folder"] = 'production/4460';
+    rtCommonProps["common.resources.cdn.host"] = 'https://static.cdn-website.com';
+    rtCommonProps["common.resources.folder"] = 'https://static.cdn-website.com/mnlt/production/4460';
+    rtCommonProps["feature.flag.runtime.backgroundSlider.preload.slowly"] =true;
+    rtCommonProps["feature.flag.runtime.photoswipe.fix"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.respectCssAnimationProps.enabled"] =true;
+    rtCommonProps["feature.flag.runtime.newAnimation.jitAnimation.enabled"] =true;
+    rtCommonProps["feature.flag.sites.google.analytics.gtag"] =true;
+    rtCommonProps["feature.flag.runOnReadyNewTask"] =true;
+    rtCommonProps["isAutomation.test"] =false;
+
+    
+    rtCommonProps['common.mapsProvider'] = 'mapbox';
+    
+    rtCommonProps['common.mapsProvider.version'] = '0.52.0';
+    rtCommonProps['common.geocodeProvider'] = 'here';
+    rtCommonProps['common.map.defaults.radiusSize'] = '1500';
+    rtCommonProps['common.map.defaults.radiusBg'] = 'rgba(255, 255, 255, 0.4)';
+    rtCommonProps['common.map.defaults.strokeColor'] = 'rgba(255, 255, 255, 1)';
+    rtCommonProps['common.map.defaults.strokeSize'] = '2';
+    rtCommonProps['server.for.resources'] = '';
+    rtCommonProps['feature.flag.lazy.widgets'] = true;
+    rtCommonProps['feature.flag.single.wow'] = false;
+    rtCommonProps['feature.flag.disallowPopupsInEditor'] = true;
+    rtCommonProps['feature.flag.mark.anchors'] = true;
+    rtCommonProps['captcha.public.key'] = '6LffcBsUAAAAAMU-MYacU-6QHY4iDtUEYv_Ppwlz';
+    rtCommonProps['captcha.invisible.public.key'] = '6LeiWB8UAAAAAHYnVJM7_-7ap6bXCUNGiv7bBPME';
+    rtCommonProps["images.sizes.small"] =160;
+    rtCommonProps["images.sizes.mobile"] =640;
+    rtCommonProps["images.sizes.tablet"] =1280;
+    rtCommonProps["images.sizes.desktop"] =1920;
+    rtCommonProps["modules.resources.cdn"] =true;
+    rtCommonProps["import.images.storage.imageCDN"] = 'https://lirp.cdn-website.com/';
+    rtCommonProps["facebook.api.version"] = '7.0';
+    rtCommonProps["feature.flag.runtime.inp.threshold"] =150;
+    rtCommonProps["feature.flag.performance.logs"] =true;
+    rtCommonProps["site.widget.form.captcha.type"] = 'g_recaptcha';
+    rtCommonProps["friendly.captcha.site.key"] = 'FCMGSQG9GVNMFS8K';
+    rtCommonProps["cookiebot.mapbox.consent.category"] = 'marketing';
+    rtCommonProps["platform.monolith.personalization.dateTimeCondition.popupMsgAction.moveToclient.enabled"]=false;
+
+    // feature flags that's used out of runtime module (in  legacy files)
+    rtCommonProps["site.runtime.video.background.ssr"] =true;
+
+    window.rtFlags = {};
+    rtFlags["unsuspendEcwidStoreOnRuntime.enabled"] =true;
+    rtFlags["keyboard.navigation.enabled"] =true;
+    rtFlags["scripts.widgetCount.enabled"] =true;
+    rtFlags["ecom.ecwid.categoryPage.modifyLinks"] = true;
+    rtFlags["ecom.ecwidNewUrlStructure.enabled"] = false;
+    rtFlags["ecom.ecwid.old.store.fix.scrolling.enabled"] = true;
+    rtFlags["ecom.ecwid.old.store.fix.facebook.share"] = true;
+    rtFlags["ecom.ecwid.fallBackInCaseLinksNotFound.enabled"] = true;
+    rtFlags["feature.flag.photo.gallery.exact.size"] =false;
+    rtFlags["new.store.fix.ecwid.back.bug"] =true;
+    rtFlags["facebook.runtime.widgets.upgrade"] =true;
+    rtFlags["ecom.ecwid.solve.url.modifications"] = true;
+    rtFlags["ecom.ecwid.configOptions"] = true;
+    rtFlags["geocode.search.localize"] =false;
+    rtFlags["feature.flag.runtime.newAnimation.asyncInit.setTimeout.enabled"] =false;
+    rtFlags["site.contact.form.fix.for.attribute"] =true;
+    rtFlags["contact.form.date.format.enabled"] = true;
+    rtFlags["twitter.heightLimit.enabled"] = true;
+    rtFlags["ecom.ecwid.fixTranslations.enabled"] = true;
+    rtFlags["runtime.load.script.native"] =true;
+    rtFlags["editor.classicHybrid.photogallery.fix"] =true;
+    rtFlags["runtime.lottieOverflow"] =false;
+    rtFlags["runtime.monitoring.sentry.ignoreErrors"] = "";
+</script>
+<script src="https://static.cdn-website.com/mnlt/production/4460/_dm/s/rt/dist/scripts/d-js-one-runtime-unified-desktop.min.js"  id="d-js-core"></script>
+<!-- End of HEAD RT JS Include -->
+<script src="https://static.cdn-website.com/mnlt/production/4460/_dm/s/rt/dist/scripts/d-js-jquery-migrate.min.js" ></script>
+<script>
+    
+    $(window).bind("orientationchange", function (e) {
+        $.layoutManager.initLayout();
+        
+    });
+    $(document).resize(function () {
+        
+    });
+</script>
+<script type="text/javascript" id="d_track_campaign">
+(function() {
+ 	var campaign = (/utm_campaign=([^&]*)/).exec(window.location.search);
+
+ 	if (campaign && campaign != null && campaign.length > 1) {
+ 		campaign = campaign[1];
+ 		document.cookie = "_dm_rt_campaign=" + campaign + ";expires=" + new Date().getTime() + 24*60*60*1000 + ";domain=" + window.location.hostname + ";path=/";
+ 	}
+}());
+</script>
+<script type="text/javascript" >
+  var _dm_gaq = {};
+  var _gaq = _gaq || [];
+  var _dm_insite = [];
+</script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-0WKW8X31ET"></script>
+	<script type="text/javascript" id="d_track_ga">
+	  _dm_gaq.siteAlias = 'fad78d66';
+	  _dm_gaq.systemAggregatedGaqID = '';
+	  _dm_gaq.externalGaqID = 'G-0WKW8X31ET';
+	  _dm_gaq.gaAggregatedEventAttributes = {
+		  'site_alias':  _dm_gaq.siteAlias,
+		  'product': 'DM_DIRECT',
+		  'plan': 'BUSINESS_PLUS',
+		  'dfooter': 'false',
+		  'sitetype': '1',
+		  'pwaEnabled': 'true'
+	  }
+
+	  _dm_gaq.pushEvent = function(trackingId, event, category, label, value, additionalParams = {}) {
+	  	  const eventProps = {
+			  send_to: trackingId,
+			  event_category: category,
+			  event_label: label,
+			  value,
+			  ...additionalParams,
+			  ...(trackingId === _dm_gaq.systemAggregatedGaqID
+					  ? _dm_gaq.gaAggregatedEventAttributes : {})
+		  };
+		  gtag('event', event, eventProps);
+	  }
+
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+	  function pushInsiteImpressions(id) {
+		  _dm_insite.forEach((rule) => {
+			  _dm_gaq.pushEvent(id, 'insite_impression', 'insite', rule.ruleType + '__' + rule.ruleId);
+		  });
+	  }
+
+	if(_dm_gaq.systemAggregatedGaqID){
+		// track aggregated account
+		gtag('config', '', {
+			'send_page_view': false,
+			'anonymize_ip': true,
+			'transport_type': 'beacon',
+			'custom_map': {'dimension1': 'site_alias', 'dimension2': 'product', 'dimension3': 'dFooter', 'dimension4': 'sitetype'}
+		});
+		gtag('set', 'developer_id.dMDU5Nj', true);
+
+		_dm_gaq.pushEvent('', 'page_view');
+		pushInsiteImpressions(_dm_gaq.systemAggregatedGaqID);
+	}
+
+	if(_dm_gaq.externalGaqID && _dm_gaq.externalGaqID!= '') {
+		gtag('config', 'G-0WKW8X31ET', {
+			'send_page_view': false,
+			'anonymize_ip': true,
+			'transport_type': 'beacon',
+			'linker': {
+				'domains': ['heliummarketing.agency']
+			}
+		});
+		_dm_gaq.pushEvent('G-0WKW8X31ET', 'page_view');
+		pushInsiteImpressions(_dm_gaq.externalGaqID);
+	}
+
+  </script>
+<script type="text/javascript" id="d_track_sp">
+;(function(p,l,o,w,i,n,g){if(!p[i]){p.GlobalSnowplowNamespace=p.GlobalSnowplowNamespace||[];
+p.GlobalSnowplowNamespace.push(i);p[i]=function(){(p[i].q=p[i].q||[]).push(arguments)
+};p[i].q=p[i].q||[];n=l.createElement(o);g=l.getElementsByTagName(o)[0];n.async=1;
+n.src=w;g.parentNode.insertBefore(n,g)}}(window,document,"script","//d32hwlnfiv2gyn.cloudfront.net/sp-2.0.0-dm-0.1.min.js","snowplow"));
+window.dmsnowplow  = window.snowplow;
+
+dmsnowplow('newTracker', 'cf', 'd32hwlnfiv2gyn.cloudfront.net', { // Initialise a tracker
+  appId: 'fad78d66'
+});
+
+// snowplow queries element styles so we wait until CSS calculations are done.
+requestAnimationFrame(() => {
+	dmsnowplow('trackPageView');
+	_dm_insite.forEach((rule) => {
+		// Specifically in popup only the client knows if it is shown or not so we don't always want to track its impression here
+		// the tracking is in popup.js
+		if (rule.actionName !== "popup") {
+			dmsnowplow('trackStructEvent', 'insite', 'impression', rule.ruleType, rule.ruleId);
+		}
+		window?.waitForDeferred?.('dmAjax', () => {
+			$.DM.events.trigger('event-ruleTriggered', {value: rule});
+		});
+	});
+});
+</script>
+   <div style="display:none;" id="P6iryBW0Wu"></div>
+
+<!-- photoswipe markup -->
+
+
+
+
+
+
+
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="fb-root"
+        data-locale="en"></div>
+<!-- Alias: fad78d66 -->
+<div class="dmPopupMask" id="dmPopupMask"></div>
+<div id="dmPopup" class="dmPopup">
+	<div class="dmPopupCloseWrapper"> <div class="dmPopupClose dm-common-icons-close oneIcon" onclick="dmHidePopup(event);"></div> </div>
+ 	<div class="dmPopupTitle"> <span></span> Share by:</div> 
+	<div class="data"></div>
+</div><script id="d_track_personalization">
+	window?.waitForDeferred?.('dmAjax', () => {
+		// Collects client data and updates cookies used by smart sites
+		window.expireDays = 365;
+		window.visitLength = 30 * 60000;
+		$.setCookie("dm_timezone_offset", (new Date()).getTimezoneOffset(), window.expireDays);
+			setSmartSiteCookiesInternal("dm_this_page_view","dm_last_page_view","dm_total_visits","dm_last_visit");
+	});
+</script>
+<script type="text/javascript">
+    
+    Parameters.NavigationAreaParams.MoreButtonText = 'MORE';
+    
+    Parameters.NavigationAreaParams.LessButtonText = 'LESS';
+    Parameters.HomeLinkText = 'Home';
+    </script>
+<!--  End Script tags -->
+
+<!--  Begin Body End Markup -->
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N2RRBZ7"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<style type="text/css">
+    h1,h2,h3,h4,h5,h6,h1 span, h2 span, h3 span, h4 span, h5 span {
+        line-height:1.1 !important;
+    }
+</style>
+ <script>
+ dmAPI.runOnReady('',function()
+ {
+     var ref = document.referrer;
+      console.log("referrer:="+ref);
+      const form = document.querySelector("#paperFormCustom");
+     // const form = document.querySelector("[data-paperform-id='form-id']");
+      // console.log("formID:="+form);
+      form.setAttribute('prefill-inherit', ref);
+ })
+ 
+  </script>
+  <!--  End Body End Markup -->
+
+<!--  Site Wide Html Markup -->
+<div id="swh-81ff6c4cce6a49a1995e51e621d52099">
+                            <script>
+                                const getMenu_ = {};
+                                getMenu_['fad78d66'] = function(){
+                                    return [{"title":"People","type":"home","url":"/helium-marketing","newTab":false,"orientation":"Vertical","components":[]},{"title":"Services","url":"","orientation":"Horizontal","newTab":false,"type":"blank","components":[{"ext_nav":{"name":"Ext Sub Nav","title":"","img_src":"https://irp.cdn-website.com/fad78d66/dms3rep/multi/Digital_Marketing.jpg","alt":"","order":"default","ext_nav_list":[{"hideIcon":true,"icon":"<i class=\"fas fa-bookmark\"></i>","title":"Google Ads","url":"/google-adsed83b80d","img_src":"","newTab":false,"short_desc":""},{"hideIcon":true,"icon":"<i class=\"fas fa-bookmark\"></i>","title":"SEO","url":"/copy-of-seo-services","img_src":"","newTab":false,"short_desc":""},{"hideIcon":true,"icon":"<i class=\"fas fa-bookmark\"></i>","title":"Websites","url":"/website-design","img_src":"","newTab":false,"short_desc":""},{"hideIcon":true,"icon":"<i class=\"fas fa-bookmark\"></i>","title":"Creative","url":"/creative","img_src":"","newTab":false,"short_desc":""}]}}]},{"title":"Work","url":"/marketing-portfolio","orientation":"Horizontal","newTab":false,"type":"blank","components":[]},{"title":"Insights","url":"/insights","orientation":"Horizontal","newTab":false,"type":"blank","components":[]}]
+                                }
+                            </script></div>
+<div id="swh-afac8a75024040cdabce44dfa7349801"><script>dmAPI.loadScript('https://analytics.sitewit.com/ddmarketing-plugin.js?klid=1417142245');</script></div><!--  Site Wide Html Markup -->
+</body>
+</html>
